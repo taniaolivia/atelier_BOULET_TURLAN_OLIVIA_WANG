@@ -1,4 +1,4 @@
-# atelier_BOULET_OLIVIA_WANG
+# atelier_BOULET_TURLAN_OLIVIA_WANG
 Équipes du groupe :
 - Clément BOULET/ LP2
 - Guillaume TURLAN/ LP2
