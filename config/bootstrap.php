@@ -7,8 +7,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
-$app = \DI\Bridge\Slim\Bridge::create();
-
 // Instantiate PHP-DI ContainerBuilder
 $containerBuilder = new ContainerBuilder();
 
