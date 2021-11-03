@@ -1,48 +1,52 @@
 
 html, body{
-    width: 100%;
     margin: 0;
-}
-
-body{
-    display: grid;
-    grid-template-rows: 93fr 6fr;
-    flex-direction: column;
-    height: 100%;
     width: 100%;
-    margin: 0;
+    font-family: Chalkboard, serif;
 }
 
-.alignement{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 200px 0 20px;
-    height:60px;
-    color: black;
-    border: 1px solid black;
-}
-
-.alignement > div{
+header > div{
     width: 100%;
     height: 4em;
 }
 
 
-.d{
+li{
     font-size: 18px;
     text-align:center;
-    margin-right: 60px;
-    width: 200px;
+    width: fit-content;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid black;
 }
 
-.container{
+li:hover{
+    background-color: lightskyblue;
+    color: white;
+}
+
+nav{
+    height: inherit;
+}
+
+header
+{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-left:0 !important;
-    flex-direction:row;
-    
+    height:60px;
+    color: black;
+}
+
+.header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    height: inherit;
+    margin-left: 45%;
 }
 
 a{
@@ -51,32 +55,19 @@ a{
 }
 
 a:hover{
-    font-size: 1.2em;
-    color:  #008bff;
+    background-color: lightskyblue;
+    color: white;
 }
 
 a:active{
-    font-size: 1.1em;
     color: purple;
 }
 
-.entete{
-    overflow: scroll;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    display: grid;
-    margin-top:13px;
+.content{
     width: 100%;
-    height: 89%;
-    position: absolute;
     opacity:10;
     color: black;
-}
-
-
-.text{
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -84,25 +75,12 @@ a:active{
     letter-spacing: normal;
     text-align: center;
     font-size: 20px;
+    margin-top: 7%;
 }
 
-
-nav{
-    height: inherit;
-}
-
-ul{
-    margin: 0;
-    color: #6bebd1;
-    display: flex;
-    flex-direction: row;
-    height: inherit;
-    justify-content: space-around;
-    text-align: center;
-}
-
-header{
-    height: 100px;
+.content-text{
+    border: 2px solid black;
+    padding: 10px 20px;
 }
 
 footer{
