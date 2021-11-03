@@ -1,12 +1,12 @@
 <?php
-namespace App\Controller\home;
+namespace App\Controller\accueil;
 
 use App\Controller\ActionController;
 
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class HomeAction extends ActionController{
+class AccueilAction extends ActionController{
 
     public $container;
 
