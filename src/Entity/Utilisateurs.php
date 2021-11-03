@@ -73,7 +73,7 @@ class Utilisateurs
         return $this->nomutilisateur;
     }
 
-    public function setNomutilisateur(string $nomutilisateur)
+    public function setNomutilisateur( $nomutilisateur)
     {
         $this->nomutilisateur = $nomutilisateur;
 
