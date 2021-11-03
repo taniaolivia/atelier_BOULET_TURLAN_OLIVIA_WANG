@@ -3,14 +3,12 @@
     padding: $flex-ul-padding;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: right;
     background-color: $theme-color;
 }
 @mixin flex-li($color){
     list-style-type: none;
     text-align: center;
-    margin: 15px;
     text-decoration: none;
     & a{
         text-decoration: none;
