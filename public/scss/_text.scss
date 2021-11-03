@@ -3,5 +3,5 @@
 }
 
 @mixin background-color($color){
-    color:$color !important;
+    background-color:$color !important;
 }
