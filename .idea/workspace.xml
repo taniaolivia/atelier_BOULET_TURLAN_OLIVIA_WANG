@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="new entity 2">
+    <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="bdd docker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Utilisateurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Utilisateurs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635949817119</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="bdd docker">
+      <created>1635953787756</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635953787756</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +178,8 @@
     <MESSAGE value="entity problem creat" />
     <MESSAGE value="new entity" />
     <MESSAGE value="new entity 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="new entity 2" />
+    <MESSAGE value="bdd docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="bdd docker" />
   </component>
   <component name="WindowStateProjectService">
     <state x="545" y="325" width="445" height="264" key="ComposerInitDialogKey" timestamp="1635930199568">
