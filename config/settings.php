@@ -10,7 +10,7 @@ $containerBuilder->addDefinitions([
         'doctrine' => [
             'dev_mode' => true,
             'cache_dir' => __DIR__.'/../var/cache/doctrine',
-            'metadata_dirs' => [__DIR__.'/../src/Model/'],
+            'metadata_dirs' => [__DIR__.'/../src/Entity/'],
             'connection' => [
                 'driver' => 'pdo_mysql',
                 'host' => 'mysql',
