@@ -89,7 +89,7 @@ $alert-margin : 0 !default;
 $alert-margin-bottom : 15px !default;
 
 $alert-height: auto !default;
-$alert-width: calc(100% - ( 2 * $alert-padding )) !default;
+$alert-width: calc( 100% - ( 40px )) !default;
 $alert-display : block;
 
 $alert-color : white !default;
