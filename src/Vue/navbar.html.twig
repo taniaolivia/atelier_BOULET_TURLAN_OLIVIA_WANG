@@ -1,25 +1,22 @@
 <nav>
-<ul class="flex-ul-danger">
-      <li class="flex-li">
+  <ul class="flex-ul-white">
+      <li class="flex-li-dark">
         <a class="" href="/">Accueil</a>
       </li>
       {% if session.user %}
-        <li class="flex-li">
-          <a class="" href="/contact">Nos produits</a>
-        </li>
-        <li class="flex-li">
-          <a class="" href="/group">Nos producteurs</a>
-        </li>
-        <li class="flex-li">
-          <a class="" href="/signout">Se deconnecter</a>
-        </li>
-      {% else %}
-        <li class="flex-li">
+        <li class="flex-li-dark">
           <a class="" href="/signin">Se connecter</a>
         </li>
-      {% endif %}
-
-      
-      
-    </ul>
+      {% else %}
+        <li class="flex-li-dark">
+          <a class="" href="/contact">Nos produits</a>
+        </li>
+        <li class="flex-li-dark">
+          <a class="" href="/group">Nos producteurs</a>
+        </li>
+        <li class="flex-li-dark">
+          <a class="" href="/signout">Se deconnecter</a>
+        </li>
+      {% endif %}      
+  </ul>
 </nav>

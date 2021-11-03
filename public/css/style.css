@@ -1470,4 +1470,34 @@ Tailles
   vertical-align: unset !important;
 }
 
+.flex-ul-white {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.flex-li-dark {
+  list-style-type: none;
+  text-align: center;
+  margin: 15px;
+  text-decoration: none;
+}
+.flex-li-dark a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 819px) {
+  .flex-ul-white {
+    flex-direction: column;
+  }
+}
+nav {
+  border-bottom: 1px solid black;
+}
+
 /*# sourceMappingURL=style.css.map */

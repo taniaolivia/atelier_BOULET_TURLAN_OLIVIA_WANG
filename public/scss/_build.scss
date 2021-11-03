@@ -64,7 +64,7 @@
     @include flex-ul($primary);
 }
 .flex-li{
-    @include flex-li;
+    @include flex-li($white);
 }
 
 /*
