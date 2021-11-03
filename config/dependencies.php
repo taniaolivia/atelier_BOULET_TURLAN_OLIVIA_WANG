@@ -48,10 +48,6 @@ return function (ContainerBuilder $containerBuilder){
             $twig = Twig::create($twigSettings['paths'], $options);
 
             return $twig;
-        },
-        Messages::class => function (ContainerInterface $container) {
-            return new Messages();
-            }
-
+        }
     ]);
 };
