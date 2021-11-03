@@ -28,11 +28,14 @@ return function (ContainerBuilder $containerBuilder){
                     $settings['doctrine']['metadata_dirs']
                 )
             );
+            /*
+            * Mise en commentaire car ces lignes posaient problème (03/11/2021)
             $config->setMetadataCacheImpl(
                 new FilesystemCache(
                     $settings['doctrine']['cache_dir']
                 )
             );
+            */
             return EntityManager::create(
                 $settings['doctrine']['connection'],
                 $config

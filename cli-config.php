@@ -10,9 +10,12 @@ require __DIR__ . '/vendor/autoload.php';
 // Instantiate PHP-DI ContainerBuilder
 $containerBuilder = new ContainerBuilder();
 
+/*
+* Mise en commentaire car ces lignes posaient problème (03/11/2021)
 if (false) { // Should be set to true in production
 	$containerBuilder->enableCompilation(__DIR__ . '/var/cache');
 }
+*/
 
 // Set up settings
 $settings = require __DIR__ . '/config/settings.php';
