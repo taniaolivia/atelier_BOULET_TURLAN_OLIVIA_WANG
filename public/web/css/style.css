@@ -22,10 +22,11 @@ li{
     text-align:center;
     width: fit-content;
     padding: 20px 30px 20px 30px;
+    border: 1px solid black;
 }
 
 li:hover{
-    background-color: #008bff;
+    background-color: lightskyblue;
     color: white;
 }
 
@@ -40,7 +41,6 @@ header
     align-items: center;
     height:60px;
     color: black;
-    border: 1px solid black;
 }
 
 .header-container{
@@ -61,7 +61,7 @@ a{
 }
 
 a:hover{
-    background-color: #008bff;
+    background-color: lightskyblue;
     color: white;
 }
 
