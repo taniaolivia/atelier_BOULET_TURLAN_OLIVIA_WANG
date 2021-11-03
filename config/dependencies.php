@@ -40,17 +40,6 @@ return function (ContainerBuilder $containerBuilder){
                 $settings['doctrine']['connection'],
                 $config
             );
-        },
-        Twig::class => function (ContainerInterface $container) {
-            $settings = $container->get('settings');
-            $twigSettings = $settings['twig'];
-
-            $options = $twigSettings['options'];
-            $options['cache'] = $options['cache_enabled'] ? $options['cache_path'] : false;
-
-            $twig = Twig::create($twigSettings['paths'], $options);
-
-            return $twig;
         }
     ]);
 };
