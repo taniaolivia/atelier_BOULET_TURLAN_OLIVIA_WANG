@@ -1,0 +1,14 @@
+.flex-ul-white{
+    @include flex-ul($white);
+}
+.flex-li-dark{
+    @include flex-li($black);
+}
+@media (max-width : $s - 1) {
+    .flex-ul-white{
+        flex-direction: column;
+    }
+}
+nav{
+    border-bottom: 1px solid black;
+}

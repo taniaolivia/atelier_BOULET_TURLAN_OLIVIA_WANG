@@ -6,5 +6,5 @@ use Slim\Views\Twig;
 
 
 $app->get('/',function ($request, $response, array $args){
-    return $this->get(Twig::class)->render($response,"home/index.html.twig",["session"=>$_SESSION]);
+    return $this->get(Twig::class)->render($response,"home/index.html.twig");
 });
