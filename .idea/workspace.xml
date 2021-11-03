@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="new entity 2">
-      <change afterPath="$PROJECT_DIR$/public/scss/_nosproduits.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/web/html/NosProduit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scss/_detailproduit.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/web/html/DetailProduit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/_constructeur.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/_constructeur.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/style.css" afterDir="false" />
@@ -155,7 +155,7 @@
       <workItem from="1635965267354" duration="6945000" />
       <workItem from="1635972745705" duration="1525000" />
       <workItem from="1635974333097" duration="83000" />
-      <workItem from="1635974441551" duration="3914000" />
+      <workItem from="1635974441551" duration="7560000" />
     </task>
     <task id="LOCAL-00001" summary="entity problem creat">
       <created>1635948633204</created>
@@ -185,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635970978402</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout scss de NosProduit">
+      <created>1635978485866</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635978485866</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +215,8 @@
     <MESSAGE value="new entity" />
     <MESSAGE value="new entity 2" />
     <MESSAGE value="Ajout scss de connexion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout scss de connexion" />
+    <MESSAGE value="Ajout scss de NosProduit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout scss de NosProduit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1635976844766">
@@ -223,6 +231,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="545" y="325" width="445" height="264" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1635930199568" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1635978758557">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1635978758557" />
     <state x="375" y="232" key="EditFileWatcherDialog" timestamp="1635969720351">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

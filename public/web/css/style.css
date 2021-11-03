@@ -207,4 +207,35 @@
     .poids{
         width: 100%;
     }
+
+    /*-----spécial détail produits -----*/
+    .content-photo-grand{
+        border: 2px solid black;
+        width: 500px;
+        height: 350px;
+    }
+
+    .content-photo-petit{
+        border: 2px solid black;
+        width: 200px;
+        height: fit-content;
+    }
+
+    .content-product-similaires{
+        border: 2px solid black;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .content-details{
+        width: 100%;
+        height: 380px;
+        padding-left: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content-product-infos{
+        width: 400px;
+    }
 }
