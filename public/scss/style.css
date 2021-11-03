@@ -1518,7 +1518,6 @@ nav {
     align-items: center;
     list-style-type: none;
     height: inherit;
-    margin-left: 45%;
   }
 
   a {
@@ -1555,6 +1554,74 @@ nav {
     text-align: center;
     position: absolute;
     bottom: 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #content-connexion {
+    width: 300px;
+    height: 300px;
+    background: rgba(4, 4, 4, 0.56);
+    padding: 60px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px mistyrose;
+  }
+
+  #content-connexion h1 {
+    color: #fff;
+    text-shadow: 0 0 10px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 13px;
+    color: black;
+    border-top: 1px solid #312E3D;
+    border-left: 1px solid #312E3D;
+    border-right: 1px solid #312E3D;
+    border-bottom: 1px solid #56536A;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #input-login, #input-password {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    display: block;
+    background-color: #21a4ee;
+    border: 1px solid #3762bc;
+    line-height: normal;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: lightskyblue !important;
+    color: white !important;
+  }
+
+  .btn-connexion {
+    width: 100%;
+    margin-bottom: 1%;
+  }
+
+  #header-recherche {
+    font-size: 1rem;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    border: 1px solid #DEDEDE;
+    margin: 10px 20px;
+  }
+
+  .header-panier {
+    font-size: 2rem;
+    padding: 20px;
   }
 }
 
