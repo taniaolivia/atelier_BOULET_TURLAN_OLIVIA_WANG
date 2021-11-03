@@ -1,0 +1,43 @@
+@import "constructeur";
+
+@media screen and (min-width: 1000px) {
+
+  #content-connexion{
+    @include content_type("connexion");
+  }
+
+
+  #content-connexion h1{
+    @include content-type-h1;
+  }
+
+  input{
+    @include input;
+  }
+
+  #input-login, #input-password{
+    @include input-type("login");
+    @include input-type("input-password");
+  }
+
+  button{
+    @include button;
+  }
+
+  button:hover{
+    @include hover;
+  }
+
+  .btn-connexion{
+    @include button-type("connexion");
+  }
+
+  #header-recherche{
+    @include header_type("recherche")
+  }
+
+  .header-panier {
+    @include header_type("panier")
+  }
+
+}
