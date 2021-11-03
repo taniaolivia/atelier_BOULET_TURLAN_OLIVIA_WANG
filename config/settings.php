@@ -13,15 +13,11 @@ $containerBuilder->addDefinitions([
             'metadata_dirs' => [__DIR__.'/../src/Entity/'],
             'connection' => [
                 'driver' => 'pdo_mysql',
-//                'host' => 'db',
-                'host' => 'localhost',
+                'host' => 'mysql',
                 'port' => 3306,
-//                'dbname' => 'atelier',
-                'dbname' => 'lehangar',
-//                'user' => 'btow',
-//                'password' => 'btow',
-                'user' => 'root',
-                'password' => '',
+                'dbname' => 'atelier',
+                'user' => 'btow',
+                'password' => 'btow',
                 ]
             ],
         'twig' => [
