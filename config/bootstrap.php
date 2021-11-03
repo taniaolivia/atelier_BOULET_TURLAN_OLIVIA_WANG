@@ -7,9 +7,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
-$app->get('/', function (Request $request, Response $response, $args) {
-    $response->getBody()->write("Hello world!");
-    return $response;
-});
+require __DIR__ . '/../config/routes.php';
 
 $app->run();
