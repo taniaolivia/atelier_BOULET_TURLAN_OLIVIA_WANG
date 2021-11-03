@@ -86,77 +86,77 @@ class Produit
         $this->idcommande = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-    public function getIdproduit(): ?int
+    public function getIdproduit()
     {
         return $this->idproduit;
     }
 
-    public function getNomproduit(): ?string
+    public function getNomproduit()
     {
         return $this->nomproduit;
     }
 
-    public function setNomproduit(string $nomproduit): self
+    public function setNomproduit( $nomproduit)
     {
         $this->nomproduit = $nomproduit;
 
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getDescription()
     {
         return $this->description;
     }
 
-    public function setDescription(string $description): self
+    public function setDescription( $description)
     {
         $this->description = $description;
 
         return $this;
     }
 
-    public function getTarifunitaire(): ?int
+    public function getTarifunitaire()
     {
         return $this->tarifunitaire;
     }
 
-    public function setTarifunitaire(int $tarifunitaire): self
+    public function setTarifunitaire( $tarifunitaire)
     {
         $this->tarifunitaire = $tarifunitaire;
 
         return $this;
     }
 
-    public function getLienimage(): ?string
+    public function getLienimage()
     {
         return $this->lienimage;
     }
 
-    public function setLienimage(?string $lienimage): self
+    public function setLienimage( $lienimage)
     {
         $this->lienimage = $lienimage;
 
         return $this;
     }
 
-    public function getIdcategorie(): ?Categorie
+    public function getIdcategorie()
     {
         return $this->idcategorie;
     }
 
-    public function setIdcategorie(?Categorie $idcategorie): self
+    public function setIdcategorie(Categorie $idcategorie)
     {
         $this->idcategorie = $idcategorie;
 
         return $this;
     }
 
-    public function getIdutilisateur(): ?Utilisateurs
+    public function getIdutilisateur()
     {
         return $this->idutilisateur;
     }
 
-    public function setIdutilisateur(?Utilisateurs $idutilisateur): self
+    public function setIdutilisateur(Utilisateurs $idutilisateur)
     {
         $this->idutilisateur = $idutilisateur;
 
@@ -166,12 +166,12 @@ class Produit
     /**
      * @return Collection|Commande[]
      */
-    public function getIdcommande(): Collection
+    public function getIdcommande()
     {
         return $this->idcommande;
     }
 
-    public function addIdcommande(Commande $idcommande): self
+    public function addIdcommande(Commande $idcommande)
     {
         if (!$this->idcommande->contains($idcommande)) {
             $this->idcommande[] = $idcommande;
@@ -181,7 +181,7 @@ class Produit
         return $this;
     }
 
-    public function removeIdcommande(Commande $idcommande): self
+    public function removeIdcommande(Commande $idcommande)
     {
         if ($this->idcommande->removeElement($idcommande)) {
             $idcommande->removeIdproduit($this);

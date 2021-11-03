@@ -77,53 +77,53 @@ class Commande
         $this->idproduit = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-    public function getIdcommande(): ?int
+    public function getIdcommande()
     {
         return $this->idcommande;
     }
 
-    public function getMontant(): ?int
+    public function getMontant()
     {
         return $this->montant;
     }
 
-    public function setMontant(?int $montant): self
+    public function setMontant( $montant)
     {
         $this->montant = $montant;
 
         return $this;
     }
 
-    public function getStatutpayer(): ?bool
+    public function getStatutpayer()
     {
         return $this->statutpayer;
     }
 
-    public function setStatutpayer(?bool $statutpayer): self
+    public function setStatutpayer( $statutpayer)
     {
         $this->statutpayer = $statutpayer;
 
         return $this;
     }
 
-    public function getStatutlivraison(): ?bool
+    public function getStatutlivraison()
     {
         return $this->statutlivraison;
     }
 
-    public function setStatutlivraison(?bool $statutlivraison): self
+    public function setStatutlivraison( $statutlivraison)
     {
         $this->statutlivraison = $statutlivraison;
 
         return $this;
     }
 
-    public function getIdutilisateur(): ?Utilisateurs
+    public function getIdutilisateur()
     {
         return $this->idutilisateur;
     }
 
-    public function setIdutilisateur(?Utilisateurs $idutilisateur): self
+    public function setIdutilisateur(Utilisateurs $idutilisateur)
     {
         $this->idutilisateur = $idutilisateur;
 
@@ -133,12 +133,12 @@ class Commande
     /**
      * @return Collection|Produit[]
      */
-    public function getIdproduit(): Collection
+    public function getIdproduit()
     {
         return $this->idproduit;
     }
 
-    public function addIdproduit(Produit $idproduit): self
+    public function addIdproduit(Produit $idproduit)
     {
         if (!$this->idproduit->contains($idproduit)) {
             $this->idproduit[] = $idproduit;
@@ -147,7 +147,7 @@ class Commande
         return $this;
     }
 
-    public function removeIdproduit(Produit $idproduit): self
+    public function removeIdproduit(Produit $idproduit)
     {
         $this->idproduit->removeElement($idproduit);
 

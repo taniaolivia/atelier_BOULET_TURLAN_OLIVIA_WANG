@@ -63,77 +63,77 @@ class Utilisateurs
      */
     private $numtel;
 
-    public function getIdutilisateur(): ?int
+    public function getIdutilisateur()
     {
         return $this->idutilisateur;
     }
 
-    public function getNomutilisateur(): ?string
+    public function getNomutilisateur()
     {
         return $this->nomutilisateur;
     }
 
-    public function setNomutilisateur(string $nomutilisateur): self
+    public function setNomutilisateur(string $nomutilisateur)
     {
         $this->nomutilisateur = $nomutilisateur;
 
         return $this;
     }
 
-    public function getAdresse(): ?string
+    public function getAdresse()
     {
         return $this->adresse;
     }
 
-    public function setAdresse(?string $adresse): self
+    public function setAdresse($adresse)
     {
         $this->adresse = $adresse;
 
         return $this;
     }
 
-    public function getMail(): ?string
+    public function getMail()
     {
         return $this->mail;
     }
 
-    public function setMail(?string $mail): self
+    public function setMail($mail)
     {
         $this->mail = $mail;
 
         return $this;
     }
 
-    public function getMotdepasse(): ?string
+    public function getMotdepasse()
     {
         return $this->motdepasse;
     }
 
-    public function setMotdepasse(?string $motdepasse): self
+    public function setMotdepasse($motdepasse)
     {
         $this->motdepasse = $motdepasse;
 
         return $this;
     }
 
-    public function getRoleid(): ?int
+    public function getRoleid()
     {
         return $this->roleid;
     }
 
-    public function setRoleid(?int $roleid): self
+    public function setRoleid( $roleid)
     {
         $this->roleid = $roleid;
 
         return $this;
     }
 
-    public function getNumtel(): ?int
+    public function getNumtel()
     {
         return $this->numtel;
     }
 
-    public function setNumtel(?int $numtel): self
+    public function setNumtel( $numtel)
     {
         $this->numtel = $numtel;
 
