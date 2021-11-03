@@ -1,0 +1,138 @@
+/* 
+Tailles
+*/
+$xs: 689px;
+$s: 820px;
+$m: 1000px;
+$l : 1200px;
+$el: 1400px;
+
+$red: rgb(255,0,0) !default;
+$green: rgb(0,255,0) !default;
+$blue: rgb(0,0,255) !default;
+$black: rgb(0,0,0) !default;
+$white: rgb(255,255,255) !default;
+
+
+$colors: (
+    "red" : $red,
+    "green" : $green,
+    "blue": $blue,
+    "black": $black,
+    "white": $white
+) !default;
+
+$primary: $blue !default;
+$success: $green !default;
+$danger: $red !default;
+$dark : $black !default;
+$light : $white !default;
+
+$themes-colors: (
+    "primary" : $primary,
+    "success" : $success,
+    "danger" : $danger,
+    "dark" : $dark,
+    "light" : $light
+) !default;
+
+$text-align-positions: (
+    "left": left,
+    "right" : right,
+    "center" : center,
+    "justify" : justify,
+    "justify-all" : justify-all,
+    "start" : start,
+    "end" : end,
+    "match-parent" : match-parent,
+    "inherit" : inherit,
+    "unset" : unset
+) !default;
+
+$align-items-positions: (
+    "normal": normal,
+    "stretch" : stretch,
+    "center" : center,
+    "start" : start,
+    "end" : end,
+    "flex-start" : flex-start,
+    "flex-end" : flex-end,
+    "initial" : initial,
+    "inherit" : inherit,
+    "unset" : unset
+) !default;
+// Il y en a d'autres ici : https://developer.mozilla.org/fr/docs/Web/CSS/align-items
+
+$vertical-align-positions: (
+    "baseline": baseline,
+    "sub" : sub,
+    "super" : super,
+    "text-top" : text-top,
+    "text-bottom" : text-bottom,
+    "flex-start" : flex-start,
+    "middle" : middle,
+    "top" : top,
+    "bottom" : bottom,
+    "initial" : initial,
+    "inherit" : inherit,
+    "unset" : unset
+) !default;
+
+/*
+#######################################
+##              Alertes              ##
+#######################################
+*/
+$alert-font-size : 1.5rem !default;
+$alert-padding : 20px !default;
+$alert-margin : 0 !default;
+$alert-margin-bottom : 15px !default;
+
+$alert-height: auto !default;
+$alert-width: calc(100% - ( 2 * $alert-padding )) !default;
+$alert-display : block;
+
+$alert-color : white !default;
+$alert-background-color : grey !default;
+
+/*
+#######################################
+##              Boutons              ##
+#######################################
+*/
+$btn-padding : 0.45rem 0.90rem !default;
+$btn-border-radius : 0.4rem !default;
+$btn-line-height : 1.25rem !default;
+$btn-border-width : 2px !default;
+$btn-border-style : solid !default;
+
+$btn-font-size-small: 0.80rem !default;
+$btn-padding-small: 0.30rem 0.60rem !default;
+$btn-line-height-small : 1rem !default;
+
+$btn-font-size-medium: 1rem !default;
+$btn-padding-medium: $btn-padding !default;
+
+$btn-font-size-large: 1.25rem !default;
+$btn-padding-large: 0.60rem 1.20rem !default;
+
+$btn-border-color : rgb(11, 11, 126) !default;
+$btn-background-color : $primary !default;
+$btn-color : $white !default;
+
+/*
+#######################################
+##              Navbar               ##
+#######################################
+*/
+$flex-ul-margin : 0 !default;
+$flex-ul-padding : 0 !default;
+$flex-ul-justify-content : space-around !default;
+
+/*
+#######################################
+##               Grid                ##
+#######################################
+*/
+$nb-columns:12 !default;
+$gutter: 1.2% !default;

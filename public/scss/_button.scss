@@ -1,0 +1,37 @@
+@mixin btn-structure($tall){
+    @if $tall == "small"{
+        padding : $btn-padding-small;
+        font-size: $btn-font-size-small;
+        line-height: $btn-line-height-small;
+    }
+    @if $tall =="medium"{
+        padding : $btn-padding-medium;
+        font-size: $btn-font-size-medium;
+        line-height: $btn-line-height;
+    }
+    @if $tall =="large"{
+        padding : $btn-padding-large;
+        font-size: $btn-font-size-large;
+        line-height: $btn-line-height;
+    }
+
+}
+
+@mixin btn-color($type, $color, $background-color){
+    color : $color;
+    background-color: $background-color;
+    border-color: darken($background-color,20%);
+    @if $type == "classic"{
+        border-radius: $btn-border-radius;
+        border-style: $btn-border-style;
+        border-width: $btn-border-width;
+    }
+    @if $type == "flat"{
+        border-radius: 0px;
+        border-style: $btn-border-style;
+        border-width: $btn-border-width;
+    }
+    @if $type == "fancy"{
+        box-shadow: 5px 5px 5px $background-color;
+    }
+}

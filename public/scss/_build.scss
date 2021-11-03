@@ -1,0 +1,179 @@
+@each $name, $color in $colors{
+    .text-#{$name}{
+        @include text-color($color);
+    }
+}
+@each $theme, $theme-color in $themes-colors{
+    .alert-#{$theme}{
+        $color : $alert-color;
+        @if $theme == "light" {
+            $color: $black;
+        }
+        @include alert($color,$theme-color);
+    }
+    .btn-#{$theme}.btn-classic{
+        $color : $btn-color;
+        @if $theme == "light" {
+            $color : $black;
+        }
+        @include btn-color("classic",$color,$theme-color);
+    }
+    .btn-#{$theme}.btn-flat{
+        $color : $btn-color;
+        @if $theme == "light" {
+            $color : $black;
+        }
+        @include btn-color("flat",$color,$theme-color);
+    }
+    .btn-#{$theme}.btn-fancy{
+        $color : $btn-color;
+        @if $theme == "light" {
+            $color : $black;
+        }
+        @include btn-color("fancy",$color,$theme-color);
+    }
+    .btn-#{$theme}:hover{
+        background-color: darken($theme-color,20%)
+    }
+    .btn-#{$theme}:active{
+        box-shadow: inset -2px -2px 3px lighten($theme-color,10%),
+                inset 2px 2px 3px lighten($theme-color,10%);
+    }
+    .flex-ul-#{$theme}{
+        @include flex-ul($theme-color);
+    }
+}
+
+.btn-small{
+    @include btn-structure("small");
+}
+.btn-medium{
+    @include btn-structure("medium");
+}
+.btn-large{
+    @include btn-structure("large");
+}
+
+.btn{
+    @extend .btn-primary;
+    @extend .btn-medium;
+    @extend .btn-classic;
+}
+
+.flex-ul{
+    @include flex-ul($primary);
+}
+.flex-li{
+    @include flex-li;
+}
+
+/*
+################################
+##            Grid            ##
+################################
+*/
+
+.row{
+    @include row;
+}
+/*
+################################
+##     Responsive navbar      ##
+################################
+*/
+@media (max-width : $s - 1) {
+    @each $theme, $theme-color in $themes-colors{
+        .flex-ul-#{$theme}{
+            @include flex-ul($theme-color);
+            flex-direction: column;
+        }
+    }
+}
+/*
+################################
+##           Columns          ##
+################################
+*/
+@media (max-width : $s - 1) {
+    @for $i from 1 through $nb-columns - 1 {
+        .col-xs-#{$i}{
+            width : ($one-column-width*$i) + ($gutter * ($i)) - $gutter;
+            @include col;
+        }    
+    }
+    .col-xs-#{$nb-columns}{
+        width : ($one-column-width*$nb-columns) + ($gutter * ($nb-columns));
+        @include col;
+    }
+}
+@media (min-width: $s ) and(max-width : $m - 1) {
+    @for $i from 1 through $nb-columns - 1 {
+        .col-s-#{$i}{
+            width : ($one-column-width*$i) + ($gutter * ($i))  - $gutter;
+            @include col;
+        }
+    }
+    .col-s-#{$nb-columns}{
+        width : ($one-column-width*$nb-columns) + ($gutter * ($nb-columns));
+        @include col;
+    }
+}
+@media (min-width: $m ) and(max-width : $l - 1) {
+    @for $i from 1 through $nb-columns - 1 {
+        .col-m-#{$i}{
+            width : ($one-column-width*$i) + ($gutter * ($i)) - $gutter;
+            @include col;
+        }
+    }
+    .col-m-#{$nb-columns}{
+        width : ($one-column-width*$nb-columns) + ($gutter * ($nb-columns));
+        @include col;
+    }
+}
+@media (min-width: $l ) and(max-width : $el - 1) {
+    @for $i from 1 through $nb-columns - 1 {
+        .col-l-#{$i}{
+            width : ($one-column-width*$i) + ($gutter * ($i)) - $gutter;
+            @include col;
+        }
+    }
+    .col-l-#{$nb-columns}{
+        width : ($one-column-width*$nb-columns) + ($gutter * ($nb-columns));
+        @include col;
+    }
+}
+@media (min-width: $el) {
+    @for $i from 1 through $nb-columns - 1{
+        .col-el-#{$i}{
+            width : ($one-column-width*$i) + ($gutter * ($i)) - $gutter;
+            @include col;
+        }
+    }
+    .col-el-#{$nb-columns}{
+        width : ($one-column-width*$nb-columns) + ($gutter * ($nb-columns));
+        @include col;
+    }
+
+}
+
+/*
+################################
+##         Text align         ##
+################################
+*/
+
+@each $name, $position in $text-align-positions{
+    .text-align-#{$name}{
+        @include text-align($position);
+    }
+}
+@each $name, $position in $align-items-positions{
+    .align-items-#{$name}{
+        @include text-align($position);
+    }
+}
+@each $name, $position in $vertical-align-positions{
+    .vertical-align-#{$name}{
+        @include vertical-align($position);
+    }
+}

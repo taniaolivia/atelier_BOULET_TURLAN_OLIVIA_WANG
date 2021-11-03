@@ -1,0 +1,9 @@
+@mixin text-align($position){
+    text-align: $position;
+}
+@mixin align-items($position){
+    align-items: $position;
+}
+@mixin vertical-align($position){
+    vertical-align: $position!important;
+}

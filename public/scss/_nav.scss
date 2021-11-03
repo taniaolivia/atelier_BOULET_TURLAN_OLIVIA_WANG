@@ -1,0 +1,19 @@
+@mixin flex-ul($theme-color){
+    margin: $flex-ul-margin;
+    padding: $flex-ul-padding;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $theme-color;
+}
+@mixin flex-li{
+    list-style-type: none;
+    text-align: center;
+    margin: 15px;
+    text-decoration: none;
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+}
