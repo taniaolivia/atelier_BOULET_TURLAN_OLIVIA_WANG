@@ -7,7 +7,7 @@ use Slim\Views\Twig;
 
 
 $app->get('/',function ($request, $response, array $args){
-    return $this->get(Twig::class)->render($response,"home/accueil.html.twig");
+    return $this->get(Twig::class)->render($response,"accueil/accueil.html.twig");
 });
 
 $app->get('/test', HomeAction::class);
