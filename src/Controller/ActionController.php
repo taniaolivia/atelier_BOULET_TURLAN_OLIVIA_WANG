@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use Exception;
+use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
@@ -27,6 +28,7 @@ abstract class ActionController{
      */
     public function __construct()
     {
+
     }
 
     /**
