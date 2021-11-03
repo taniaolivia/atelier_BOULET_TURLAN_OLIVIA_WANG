@@ -13,7 +13,7 @@ $containerBuilder->addDefinitions([
             'metadata_dirs' => [__DIR__.'/../src/Model/'],
             'connection' => [
                 'driver' => 'pdo_mysql',
-                'host' => 'db',
+                'host' => 'mysql',
                 'port' => 3306,
                 'dbname' => 'atelier',
                 'user' => 'btow',
