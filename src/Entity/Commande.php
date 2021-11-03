@@ -24,27 +24,6 @@ class Commande
     private $idcommande;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="nomClient", type="string", length=255, nullable=false)
-     */
-    private $nomclient;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="mailClient", type="string", length=255, nullable=false)
-     */
-    private $mailclient;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="telClient", type="integer", nullable=false)
-     */
-    private $telclient;
-
-    /**
      * @var int|null
      *
      * @ORM\Column(name="montant", type="integer", nullable=true)
@@ -98,89 +77,53 @@ class Commande
         $this->idproduit = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-    public function getIdcommande()
+    public function getIdcommande(): ?int
     {
         return $this->idcommande;
     }
 
-    public function getNomclient()
-    {
-        return $this->nomclient;
-    }
-
-    public function setNomclient( $nomclient)
-    {
-        $this->nomclient = $nomclient;
-
-        return $this;
-    }
-
-    public function getMailclient()
-    {
-        return $this->mailclient;
-    }
-
-    public function setMailclient( $mailclient)
-    {
-        $this->mailclient = $mailclient;
-
-        return $this;
-    }
-
-    public function getTelclient()
-    {
-        return $this->telclient;
-    }
-
-    public function setTelclient( $telclient)
-    {
-        $this->telclient = $telclient;
-
-        return $this;
-    }
-
-    public function getMontant()
+    public function getMontant(): ?int
     {
         return $this->montant;
     }
 
-    public function setMontant( $montant)
+    public function setMontant(?int $montant): self
     {
         $this->montant = $montant;
 
         return $this;
     }
 
-    public function getStatutpayer()
+    public function getStatutpayer(): ?bool
     {
         return $this->statutpayer;
     }
 
-    public function setStatutpayer( $statutpayer)
+    public function setStatutpayer(?bool $statutpayer): self
     {
         $this->statutpayer = $statutpayer;
 
         return $this;
     }
 
-    public function getStatutlivraison()
+    public function getStatutlivraison(): ?bool
     {
         return $this->statutlivraison;
     }
 
-    public function setStatutlivraison( $statutlivraison)
+    public function setStatutlivraison(?bool $statutlivraison): self
     {
         $this->statutlivraison = $statutlivraison;
 
         return $this;
     }
 
-    public function getIdutilisateur()
+    public function getIdutilisateur(): ?Utilisateurs
     {
         return $this->idutilisateur;
     }
 
-    public function setIdutilisateur(Utilisateurs $idutilisateur)
+    public function setIdutilisateur(?Utilisateurs $idutilisateur): self
     {
         $this->idutilisateur = $idutilisateur;
 
@@ -190,12 +133,12 @@ class Commande
     /**
      * @return Collection|Produit[]
      */
-    public function getIdproduit()
+    public function getIdproduit(): Collection
     {
         return $this->idproduit;
     }
 
-    public function addIdproduit(Produit $idproduit)
+    public function addIdproduit(Produit $idproduit): self
     {
         if (!$this->idproduit->contains($idproduit)) {
             $this->idproduit[] = $idproduit;
@@ -204,7 +147,7 @@ class Commande
         return $this;
     }
 
-    public function removeIdproduit(Produit $idproduit)
+    public function removeIdproduit(Produit $idproduit): self
     {
         $this->idproduit->removeElement($idproduit);
 

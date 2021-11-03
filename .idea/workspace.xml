@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="">
+    <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="entity problem creat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +127,14 @@
       <workItem from="1635930140210" duration="3671000" />
       <workItem from="1635936489178" duration="1766000" />
     </task>
+    <task id="LOCAL-00001" summary="entity problem creat">
+      <created>1635948633204</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635948633204</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +152,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="entity problem creat" />
+    <option name="LAST_COMMIT_MESSAGE" value="entity problem creat" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="545" y="325" width="445" height="264" key="ComposerInitDialogKey" timestamp="1635930199568">
       <screen x="0" y="0" width="1536" height="824" />
@@ -154,13 +165,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1635947565494" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1635948640015">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1635948640015" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1635935114894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1635935114894" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1635948225593">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1635948867885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1635948225593" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1635948867885" />
   </component>
 </project>

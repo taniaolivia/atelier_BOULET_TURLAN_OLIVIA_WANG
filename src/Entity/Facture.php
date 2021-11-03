@@ -38,29 +38,29 @@ class Facture
      */
     private $idcommande;
 
-    public function getNumfacture()
+    public function getNumfacture(): ?int
     {
         return $this->numfacture;
     }
 
-    public function getMontant()
+    public function getMontant(): ?int
     {
         return $this->montant;
     }
 
-    public function setMontant( $montant)
+    public function setMontant(int $montant): self
     {
         $this->montant = $montant;
 
         return $this;
     }
 
-    public function getIdcommande()
+    public function getIdcommande(): ?Commande
     {
         return $this->idcommande;
     }
 
-    public function setIdcommande(Commande $idcommande)
+    public function setIdcommande(?Commande $idcommande): self
     {
         $this->idcommande = $idcommande;
 

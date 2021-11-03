@@ -31,9 +31,9 @@ class Utilisateurs
     /**
      * @var string|null
      *
-     * @ORM\Column(name="localisation", type="string", length=255, nullable=true)
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
      */
-    private $localisation;
+    private $adresse;
 
     /**
      * @var string|null
@@ -43,80 +43,99 @@ class Utilisateurs
     private $mail;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(name="motDePasse", type="string", length=255, nullable=false)
+     * @ORM\Column(name="motDePasse", type="string", length=255, nullable=true)
      */
     private $motdepasse;
 
     /**
-     * @var string|null
+     * @var int|null
      *
-     * @ORM\Column(name="role", type="string", length=255, nullable=true)
+     * @ORM\Column(name="roleId", type="integer", nullable=true)
      */
-    private $role;
+    private $roleid;
 
-    public function getIdutilisateur()
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="numTel", type="integer", nullable=true)
+     */
+    private $numtel;
+
+    public function getIdutilisateur(): ?int
     {
         return $this->idutilisateur;
     }
 
-    public function getNomutilisateur()
+    public function getNomutilisateur(): ?string
     {
         return $this->nomutilisateur;
     }
 
-    public function setNomutilisateur( $nomutilisateur)
+    public function setNomutilisateur(string $nomutilisateur): self
     {
         $this->nomutilisateur = $nomutilisateur;
 
         return $this;
     }
 
-    public function getLocalisation()
+    public function getAdresse(): ?string
     {
-        return $this->localisation;
+        return $this->adresse;
     }
 
-    public function setLocalisation( $localisation)
+    public function setAdresse(?string $adresse): self
     {
-        $this->localisation = $localisation;
+        $this->adresse = $adresse;
 
         return $this;
     }
 
-    public function getMail()
+    public function getMail(): ?string
     {
         return $this->mail;
     }
 
-    public function setMail( $mail)
+    public function setMail(?string $mail): self
     {
         $this->mail = $mail;
 
         return $this;
     }
 
-    public function getMotdepasse()
+    public function getMotdepasse(): ?string
     {
         return $this->motdepasse;
     }
 
-    public function setMotdepasse( $motdepasse)
+    public function setMotdepasse(?string $motdepasse): self
     {
         $this->motdepasse = $motdepasse;
 
         return $this;
     }
 
-    public function getRole()
+    public function getRoleid(): ?int
     {
-        return $this->role;
+        return $this->roleid;
     }
 
-    public function setRole( $role)
+    public function setRoleid(?int $roleid): self
     {
-        $this->role = $role;
+        $this->roleid = $roleid;
+
+        return $this;
+    }
+
+    public function getNumtel(): ?int
+    {
+        return $this->numtel;
+    }
+
+    public function setNumtel(?int $numtel): self
+    {
+        $this->numtel = $numtel;
 
         return $this;
     }
