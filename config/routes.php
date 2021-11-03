@@ -8,6 +8,3 @@ use DI\ContainerBuilder;
 
 
 $app->get('/', AccueilAction::class);
-
-
-
