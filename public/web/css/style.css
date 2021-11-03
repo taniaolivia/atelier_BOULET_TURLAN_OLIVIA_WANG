@@ -1,15 +1,9 @@
 
 html, body{
     margin: 0;
+    width: 100%;
     font-family: Chalkboard, serif;
 }
-
-body{
-    width: 100%;
-    margin: 0;
-}
-
-
 
 header > div{
     width: 100%;
