@@ -2,9 +2,7 @@
 namespace App\Controller\Produit;
 
 use App\Controller\ActionController;
-use App\Entity\Produit;
 use App\Repository\ProduitRepository;
-use Doctrine\ORM\EntityManager;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 

@@ -31,7 +31,7 @@ class UtilisateursRepository
 
     public function findProducteurByName(string $nomProducteur): Utilisateurs
     {
-        $producteur = $this->em->getRepository(Utilisateurs::class)->findOneBy(['nomUtilisateur'=> $nomProducteur]);
+        $producteur = $this->em->getRepository(Utilisateurs::class)->findOneBy(['nomutilisateur'=> $nomProducteur]);
         return $producteur;
     }
 }

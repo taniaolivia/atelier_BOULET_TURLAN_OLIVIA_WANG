@@ -1,9 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des produits{% endblock %}
+{% block title %}
+    {% if producteur %}
+        {{ producteur.nomUtilisateur }}
+    {% endif %}
+{% endblock %}
 
 {% block main %}
-    <p>test</p>
+    {% if producteur %}
+        <p>{{ producteur.nomUtilisateur }}</p>
+        <p>{{ producteur.mail }}</p>
+        <p>{{ producteur.numTel }}</p>
+    {% endif %}
 {% endblock %}
 
 
