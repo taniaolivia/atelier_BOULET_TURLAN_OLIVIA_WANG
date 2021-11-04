@@ -7,6 +7,7 @@ use App\Controller\Produit\DetailProduitAction;
 use App\Controller\Utilisateurs\Producteur\ListeProducteursAction;
 use App\Controller\Utilisateurs\Producteur\DetailProducteurAction;
 use App\Controller\Utilisateurs\Gerant\ListCommandesAction;
+use App\Controller\Utilisateurs\Gerant\ViewDetailCommandAction;
 
 $app->get('/', AccueilAction::class);
 $app->get('/nosproduits', ListeProduitsAction::class)->setName('nosproduits');
@@ -17,5 +18,7 @@ $app->get('/nosproducteurs/{producteur}', DetailProducteurAction::class)->setNam
 $app->group('/gerant', function (RouteCollectorProxy $group) {
 
     $group->get('/list-commandes', ListCommandesAction::class);
+    $group->get('/commande/{id}', ViewDetailCommandAction::class);
+
 });
 

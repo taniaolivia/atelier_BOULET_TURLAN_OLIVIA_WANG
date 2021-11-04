@@ -7,7 +7,7 @@ use Psr\Container\ContainerInterface;
 use Doctrine\ORM\EntityManager;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class ListCommandesAction extends ActionController{
+class ViewDetailCommandAction extends ActionController{
 
     public $container;
     private $commandeRepository;
@@ -20,9 +20,12 @@ class ListCommandesAction extends ActionController{
 
     protected function action():Response
     {
-        $commandes = $this->commandeRepository->findAllCommandesWithClientName();
-        return $this->container->get('view')->render($this->response, 'commande/listCommandes.html.twig',[
-            "commandes"=>$commandes
+        $commandeId = (int) $this->args['id'];
+        $commande = $this->commandeRepository->findOneById($commandeId);
+        $produits = $this->commandeRepository->findProduitsDeLaCommande($commandeId);
+        return $this->container->get('view')->render($this->response, 'commande/detailCommande.html.twig',[
+            "commande"=>$commande,
+            "produits"=>$produits
         ]);                
     }
 
