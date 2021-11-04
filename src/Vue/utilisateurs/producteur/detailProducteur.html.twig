@@ -6,6 +6,10 @@
     {% endif %}
 {% endblock %}
 
+{% block header %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+
 {% block main %}
     {% for producteur in producteur %}
         <p>{{ producteur.nomUtilisateur }}</p>

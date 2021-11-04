@@ -13,18 +13,22 @@ class DetailProduitAction extends ActionController{
     public $produitRepository;
     public $utilisateursRepository;
 
-    public function __construct(ContainerInterface $container, ProduitRepository $produitRepository, UtilisateursRepository $utilisateursRepository)
+    public function __construct(ContainerInterface $container, ProduitRepository $repository)
     {
         $this->container = $container;
-        $this->produitRepository = $produitRepository;
-        $this->utilisateursRepository = $utilisateursRepository;
+        $this->repository = $repository;
     }
 
     protected function action():Response
     {
-        $produit = $this->produitRepository->findProduitById($this->args['produit']);
-        $producteur = $this->produitRepository->findProducteurByProduit($this->args['produit']);
+        $produit = $this->repository->findProduitById($this->args['produit']);
+        $producteur = $this->repository->findProducteurByProduit($this->args['produit']);
+        $nom_produit = $this->repository->findAllProduitById($this->args['produit']);
+        $produit_similaire = $this->repository->findAllProduitByName($nom_produit);
 
-        return $this->container->get('view')->render($this->response, 'produit/detailProduit.html.twig', ['produit' => $produit, 'producteur' => $producteur]);
+        return $this->container->get('view')->render($this->response, 'produit/detailProduit.html.twig', [
+            'produit' => $produit,
+            'producteur' => $producteur,
+            'similaire' => $produit_similaire]);
     }
 }

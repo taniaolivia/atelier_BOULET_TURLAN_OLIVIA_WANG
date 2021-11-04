@@ -2,6 +2,10 @@
 
 {% block title %}Accueil{% endblock %}
 
+{% block header %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+
 {% block main %}
     
         {% for commande in commandes %}

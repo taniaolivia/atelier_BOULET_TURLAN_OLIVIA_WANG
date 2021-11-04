@@ -1,22 +1,9 @@
-<nav>
-  <ul class="flex-ul-white">
-      <li class="flex-li-dark">
-        <a class="" href="/">Accueil</a>
-      </li>
-      {% if session.user %}
-        <li class="flex-li-dark">
-          <a class="" href=#>Se connecter</a>
-        </li>
-      {% else %}
-        <li class="flex-li-dark">
-          <a class="" href={{ url_for('nosproduits') }}>Nos produits</a>
-        </li>
-        <li class="flex-li-dark">
-          <a class="" href={{ url_for('nosproducteurs') }}>Nos producteurs</a>
-        </li>
-        <li class="flex-li-dark">
-          <a class="" href="/signout">Se deconnecter</a>
-        </li>
-      {% endif %}      
-  </ul>
-</nav>
+<ul class="header-container">
+    <img id="header-logo" src={{ base_path() }}"/images/logo_2.png" alt="logo">
+    <li><a href="/">Accueil</a></li>
+    <li><a href={{ url_for('nosproduits') }}>Nos produits</a></li>
+    <li><a href={{ url_for('nosproducteurs') }}>Nos producteurs</a></li>
+    <li><a href=#>Connexion</a></li>
+    <input type="text" id="header-recherche" placeholder="Recherche..." />
+    <a class="header-panier"><span class="mdi mdi-cart"></span></a>
+</ul>
