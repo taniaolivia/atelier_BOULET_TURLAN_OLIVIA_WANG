@@ -43,7 +43,7 @@ class ProduitRepository
             ->select('p.idUtilisateur, u.nomUtilisateur')
             ->from('produit', 'p')
             ->where('p.idProduit = :idProduit')
-            ->leftJoin('p', 'utilisateurs', 'u', 'p.idUtilisateur = u.idUtilisateur')
+            ->leftJoin('p', 'utilisateur', 'u', 'p.idUtilisateur = u.idUtilisateur')
             ->setParameter('idProduit', $idProduit)
             ->execute()
             ->fetchAllAssociative();

@@ -21,7 +21,7 @@ class CommandeRepository
         $commandes = $query
             ->select('c.*, u.nomUtilisateur')
             ->from('commande', 'c')
-            ->leftJoin('c','utilisateurs','u', 'c.idUtilisateur = u.idUtilisateur')
+            ->leftJoin('c','utilisateur','u', 'c.idUtilisateur = u.idUtilisateur')
             ->execute()
             ->fetchAllAssociative();
 
@@ -49,10 +49,10 @@ class CommandeRepository
 
         $produits = $query
             ->select('p.idProduit, p.nomProduit')
-            ->from('composantpanier', 'c')
+            ->from('panier', 'panier')
             ->where('idCommande=:idCommande')
             ->setParameter('idCommande',$idCommande)
-            ->leftJoin('c','produit','p', 'c.idProduit = p.idProduit')
+            ->leftJoin('panier','produit','p', 'panier.idProduit = p.idProduit')
             ->execute()
             ->fetchAllAssociative();
 

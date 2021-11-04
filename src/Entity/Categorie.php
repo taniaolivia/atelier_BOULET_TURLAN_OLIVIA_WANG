@@ -31,9 +31,9 @@ class Categorie
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     * @ORM\Column(name="descriptionCategorie", type="string", length=255, nullable=false)
      */
-    private $description;
+    private $descriptionCategorie;
 
     public function getIdcategorie()
     {
@@ -52,14 +52,14 @@ class Categorie
         return $this;
     }
 
-    public function getDescription()
+    public function getDescriptionCategorie()
     {
-        return $this->description;
+        return $this->descriptionCategorie;
     }
 
-    public function setDescription( $description)
+    public function setDescriptionCategorie( $descriptionCategorie)
     {
-        $this->description = $description;
+        $this->descriptionCategorie = $descriptionCategorie;
 
         return $this;
     }

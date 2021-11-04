@@ -24,9 +24,9 @@ class Commande
     private $idcommande;
 
     /**
-     * @var int|null
+     * @var string
      *
-     * @ORM\Column(name="montant", type="integer", nullable=true)
+     * @ORM\Column(name="montant", type="string",length=255)
      */
     private $montant;
 
@@ -45,36 +45,21 @@ class Commande
     private $statutlivraison;
 
     /**
-     * @var \Utilisateurs
+     * @var \Utilisateur
      *
-     * @ORM\ManyToOne(targetEntity="Utilisateurs")
+     * @ORM\ManyToOne(targetEntity="Utilisateur")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="idUtilisateur", referencedColumnName="idUtilisateur")
      * })
      */
     private $idutilisateur;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Produit", inversedBy="idcommande")
-     * @ORM\JoinTable(name="composantpanier",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="idCommande", referencedColumnName="idCommande")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="idProduit", referencedColumnName="idProduit")
-     *   }
-     * )
-     */
-    private $idproduit;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->idproduit = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     public function getIdcommande()
@@ -123,33 +108,9 @@ class Commande
         return $this->idutilisateur;
     }
 
-    public function setIdutilisateur(Utilisateurs $idutilisateur)
+    public function setIdutilisateur(Utilisateur $idutilisateur)
     {
         $this->idutilisateur = $idutilisateur;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Produit[]
-     */
-    public function getIdproduit()
-    {
-        return $this->idproduit;
-    }
-
-    public function addIdproduit(Produit $idproduit)
-    {
-        if (!$this->idproduit->contains($idproduit)) {
-            $this->idproduit[] = $idproduit;
-        }
-
-        return $this;
-    }
-
-    public function removeIdproduit(Produit $idproduit)
-    {
-        $this->idproduit->removeElement($idproduit);
 
         return $this;
     }
