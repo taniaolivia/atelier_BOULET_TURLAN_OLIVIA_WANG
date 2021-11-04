@@ -10,14 +10,13 @@ use Psr\Http\Message\ResponseInterface as Response;
 class DetailProduitAction extends ActionController{
 
     public $container;
-    public $produitRepository;
-    public $utilisateurRepository;
+    public $repository;
 
-    public function __construct(ContainerInterface $container, ProduitRepository $produitRepository, UtilisateurRepository $utilisateurRepository)
+    public function __construct(ContainerInterface $container, ProduitRepository $repository)
     {
         $this->container = $container;
-        $this->produitRepository = $produitRepository;
-        $this->utilisateurRepository = $utilisateurRepository;
+        $this->repository = $repository;
+
     }
 
     protected function action():Response
