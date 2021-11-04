@@ -1,0 +1,10 @@
+@import "constructeur";
+@media screen and (min-width: 1000px) {
+  .scroll{
+    @include scroll;
+  }
+
+  .large{
+    height: 100%;
+  }
+}

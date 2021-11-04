@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
@@ -214,3 +215,5 @@
     <option name="LAST_COMMIT_MESSAGE" value="new entity 2" />
   </component>
 </project>
+=======
+>>>>>>> da70e2c7f85fb14c8c46bc59c54ddac4d404fb3f

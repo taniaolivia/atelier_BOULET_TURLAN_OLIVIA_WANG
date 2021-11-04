@@ -1,6 +1,6 @@
 /vendor/
 /mysql/
-.idea/
+/.idea/
 composer.lock
 /var/
 /public/css/style.css.map

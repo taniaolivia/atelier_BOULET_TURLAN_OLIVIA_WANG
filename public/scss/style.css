@@ -408,7 +408,7 @@ Tailles
 }
 
 .alert-primary {
-  width: calc(100% - 40px);
+  width: calc( 100% - ( 40px ));
   height: auto;
   display: block;
   font-size: 1.5rem;
@@ -461,7 +461,7 @@ Tailles
 }
 
 .alert-success {
-  width: calc(100% - 40px);
+  width: calc( 100% - ( 40px ));
   height: auto;
   display: block;
   font-size: 1.5rem;
@@ -514,7 +514,7 @@ Tailles
 }
 
 .alert-danger {
-  width: calc(100% - 40px);
+  width: calc( 100% - ( 40px ));
   height: auto;
   display: block;
   font-size: 1.5rem;
@@ -567,7 +567,7 @@ Tailles
 }
 
 .alert-dark {
-  width: calc(100% - 40px);
+  width: calc( 100% - ( 40px ));
   height: auto;
   display: block;
   font-size: 1.5rem;
@@ -620,7 +620,7 @@ Tailles
 }
 
 .alert-light {
-  width: calc(100% - 40px);
+  width: calc( 100% - ( 40px ));
   height: auto;
   display: block;
   font-size: 1.5rem;
