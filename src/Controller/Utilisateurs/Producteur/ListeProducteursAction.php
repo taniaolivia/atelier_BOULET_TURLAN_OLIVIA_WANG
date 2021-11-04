@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller\Utilisateurs;
+namespace App\Controller\Utilisateurs\Producteur;
 
 use App\Controller\ActionController;
 use App\Repository\UtilisateursRepository;
@@ -20,8 +20,6 @@ class ListeProducteursAction extends ActionController{
     protected function action():Response
     {
         $producteurs = $this->repository->findAllProducteursByRole(1);
-
-        var_dump($producteurs);
         return $this->container->get('view')->render($this->response, 'utilisateurs/producteur/listeProducteurs.html.twig', ['producteurs' => $producteurs]);
     }
 

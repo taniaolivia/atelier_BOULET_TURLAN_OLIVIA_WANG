@@ -22,9 +22,14 @@
     <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="new entity 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/accueil/AccueilAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Accueil/AccueilAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/userRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Utilisateurs/DetailProducteurAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Utilisateurs/Producteur/DetailProducteurAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Utilisateurs/ListeProducteursAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Utilisateurs/Producteur/ListeProducteursAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProduitInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UtilisateursInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UtilisateursRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UtilisateursRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/utilisateurs/producteur/detailProducteur.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/utilisateurs/producteur/detailProducteur.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/utilisateurs/producteur/listeProducteurs.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/utilisateurs/producteur/listeProducteurs.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +149,7 @@
       <recent name="$PROJECT_DIR$/src/Controller/produit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller/Utilisateurs/Producteur" />
       <recent name="$PROJECT_DIR$/src/Vue/utilisateur" />
       <recent name="C:\xampp\htdocs\PROJECT_LCP\atelier_BOULET_TURLAN_OLIVIA_WANG\src\Entity" />
     </key>

@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\Produit;
 use Doctrine\ORM\EntityManager;
 
-class ProduitRepository implements ProduitInterface
+class ProduitRepository
 {
     public $em;
 

@@ -3,8 +3,8 @@
 use App\Controller\Accueil\AccueilAction;
 use App\Controller\Produit\ListeProduitsAction;
 use App\Controller\Produit\DetailProduitAction;
-use App\Controller\Utilisateurs\ListeProducteursAction;
-use App\Controller\Utilisateurs\DetailProducteurAction;
+use App\Controller\Utilisateurs\Producteur\ListeProducteursAction;
+use App\Controller\Utilisateurs\Producteur\DetailProducteurAction;
 
 
 $app->get('/', AccueilAction::class);

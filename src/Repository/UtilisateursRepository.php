@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\Utilisateurs;
 use Doctrine\ORM\EntityManager;
 
-class UtilisateursRepository implements UtilisateursInterface
+class UtilisateursRepository
 {
     public $em;
 
@@ -16,8 +16,6 @@ class UtilisateursRepository implements UtilisateursInterface
 
     public function findAllProducteursByRole(int $roleId)
     {
-        //$utilisateurs = $this->em->getRepository(Utilisateurs::class)->findAll();
-        //return $utilisateurs;
         $query = $this->em->getConnection()->createQueryBuilder();
 
         $rows = $query
@@ -31,9 +29,9 @@ class UtilisateursRepository implements UtilisateursInterface
         return $rows;
     }
 
-    public function findProducteursByName(string $nomProduit): Utilisateurs
+    public function findProducteurByName(string $nomProducteur): Utilisateurs
     {
-        $produit = $this->em->getRepository(Produit::class)->findOneBy(['nomproduit'=> $nomProduit]);
-        return $produit;
+        $producteur = $this->em->getRepository(Utilisateurs::class)->findOneBy(['nomUtilisateur'=> $nomProducteur]);
+        return $producteur;
     }
 }
