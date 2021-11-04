@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="new entity 2">
-      <change afterPath="$PROJECT_DIR$/public/web/html/InfoUtilisateur.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/web/html/NosProducteur.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web/html/DetailProduit.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/web/html/DetailProduit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web/html/NosProduit.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/web/html/NosProduit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +149,7 @@
       <workItem from="1635965267354" duration="6945000" />
       <workItem from="1635972745705" duration="1525000" />
       <workItem from="1635974333097" duration="83000" />
-      <workItem from="1635974441551" duration="12553000" />
+      <workItem from="1635974441551" duration="13070000" />
     </task>
     <task id="LOCAL-00001" summary="entity problem creat">
       <created>1635948633204</created>
@@ -202,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635985598253</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Ajout scss d'info d'utilisateur">
+      <created>1635987188524</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1635987188524</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +233,8 @@
     <MESSAGE value="Ajout scss de NosProduit" />
     <MESSAGE value="Ajout scss de détailProduit" />
     <MESSAGE value="Ajout scss de panier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout scss de panier" />
+    <MESSAGE value="Ajout scss d'info d'utilisateur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout scss d'info d'utilisateur" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1635976844766">
