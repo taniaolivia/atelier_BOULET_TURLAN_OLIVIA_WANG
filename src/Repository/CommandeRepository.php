@@ -33,10 +33,11 @@ class CommandeRepository
         $query = $this->em->getConnection()->createQueryBuilder();
 
         $commande = $query
-            ->select('*')
-            ->from('commande')
+            ->select('c.*, u.nomUtilisateur')
+            ->from('commande','c')
             ->where('idCommande=:idCommande')
             ->setParameter('idCommande',$id)
+            ->leftJoin('c','utilisateur','u', 'c.idUtilisateur = u.idUtilisateur')
             ->execute()
             ->fetchAllAssociative();
 
@@ -48,7 +49,7 @@ class CommandeRepository
         $query = $this->em->getConnection()->createQueryBuilder();
 
         $produits = $query
-            ->select('p.idProduit, p.nomProduit')
+            ->select('p.idProduit, p.nomProduit, panier.quantite')
             ->from('panier', 'panier')
             ->where('idCommande=:idCommande')
             ->setParameter('idCommande',$idCommande)
