@@ -5,6 +5,7 @@
 {% block main %}
     
         {% for commande in commandes %}
+        <a href={{commande.idCommande}}>
         <div class="row">
             <div class="col-l-2">
                 {{commande.idCommande}}
@@ -16,6 +17,7 @@
                 {{commande.nomUtilisateur}}
             </div>
         </div>
+        </a>
         {% endfor %}
     
 {% endblock %}

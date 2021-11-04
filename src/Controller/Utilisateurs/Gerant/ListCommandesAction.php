@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller\Commande;
+namespace App\Controller\Utilisateurs\Gerant;
 
 use App\Controller\ActionController;
 use App\Repository\CommandeRepository;
