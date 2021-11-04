@@ -250,6 +250,13 @@ $third-color-default: black !default;
   border: unset;
 }
 
+@mixin scroll{
+  height: 550px;
+  overflow-y: scroll;
+  padding: 0 30px;
+}
+
+
 
 
 

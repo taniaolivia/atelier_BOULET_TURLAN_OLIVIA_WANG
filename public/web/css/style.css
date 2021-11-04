@@ -263,4 +263,16 @@
     .border-unset{
         border: unset;
     }
+
+
+    /*-----spécial facture -----*/
+    .scroll{
+        height: 550px;
+        overflow-y: scroll;
+        padding: 0 30px;
+    }
+
+    .large{
+        height: 100%;
+    }
 }
