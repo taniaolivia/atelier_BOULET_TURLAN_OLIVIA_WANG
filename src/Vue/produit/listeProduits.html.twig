@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+    {% for produits in produits %}
+        <p><a href={{ url_for('detailproduit', {'produit' : produits.nomProduit }) }}>{{ produits.nomProduit }}</a></p>
+    {% endfor %}
+{% endblock %}
+
+

@@ -21,11 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="new entity 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/_constructeur.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/_constructeur.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/_nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/_rules.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/_rules.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/_text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/accueil/AccueilAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Accueil/AccueilAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/userRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,31 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="Produit" />
+                    <option name="lastUsedInstant" value="1635963196" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1635963195" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -107,17 +131,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Entity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Vue" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\PROJECT_LCP\atelier_BOULET_TURLAN_OLIVIA_WANG\src\Entity" />
-      <recent name="C:\xampp\htdocs\PROJECT_LCP\atelier_BOULET_TURLAN_OLIVIA_WANG\src" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/Vue" />
+      <recent name="$PROJECT_DIR$/src/Repository" />
+      <recent name="$PROJECT_DIR$/src/Controller" />
+      <recent name="$PROJECT_DIR$/src/Vue/produit" />
+      <recent name="$PROJECT_DIR$/src/Controller/produit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Vue/utilisateur" />
       <recent name="C:\xampp\htdocs\PROJECT_LCP\atelier_BOULET_TURLAN_OLIVIA_WANG\src\Entity" />
     </key>
   </component>
@@ -177,27 +204,5 @@
     <MESSAGE value="new entity" />
     <MESSAGE value="new entity 2" />
     <option name="LAST_COMMIT_MESSAGE" value="new entity 2" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="545" y="325" width="445" height="264" key="ComposerInitDialogKey" timestamp="1635930199568">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="545" y="325" width="445" height="264" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1635930199568" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1635949344253">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1635949344253" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1635949825727">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1635949825727" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1635935114894">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1635935114894" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1635948867885">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1635948867885" />
   </component>
 </project>
