@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% if produit %}
+        {{ produit.nomProduit }}
+    {% endif %}
+{% endblock %}
+
+{% block main %}
+    {% if produit %}
+        <p>{{ produit.nomProduit }}</p>
+        <p>{{ produit.description }}</p>
+        <p>{{ produit.tarifUnitaire }}€</p>
+    {% endif %}
+{% endblock %}
+
+

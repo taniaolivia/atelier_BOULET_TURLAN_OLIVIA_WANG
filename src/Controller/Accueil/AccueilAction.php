@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller\accueil;
+namespace App\Controller\Accueil;
 
 use App\Controller\ActionController;
 

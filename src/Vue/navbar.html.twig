@@ -5,14 +5,14 @@
       </li>
       {% if session.user %}
         <li class="flex-li-dark">
-          <a class="" href="/signin">Se connecter</a>
+          <a class="" href=#>Se connecter</a>
         </li>
       {% else %}
         <li class="flex-li-dark">
-          <a class="" href="/contact">Nos produits</a>
+          <a class="" href={{ url_for('nosproduits') }}>Nos produits</a>
         </li>
         <li class="flex-li-dark">
-          <a class="" href="/group">Nos producteurs</a>
+          <a class="" href={{ url_for('nosproducteurs') }}>Nos producteurs</a>
         </li>
         <li class="flex-li-dark">
           <a class="" href="/signout">Se deconnecter</a>
