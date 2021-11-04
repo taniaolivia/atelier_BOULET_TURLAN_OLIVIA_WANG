@@ -38,9 +38,9 @@ class Produit
     private $description;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="tarifUnitaire", type="integer", nullable=false)
+     * @ORM\Column(name="tarifUnitaire", type="string", length=255, nullable=false)
      */
     private $tarifunitaire;
 
@@ -62,28 +62,21 @@ class Produit
     private $idcategorie;
 
     /**
-     * @var \Utilisateurs
+     * @var \Utilisateur
      *
-     * @ORM\ManyToOne(targetEntity="Utilisateurs")
+     * @ORM\ManyToOne(targetEntity="Utilisateur")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="idUtilisateur", referencedColumnName="idUtilisateur")
      * })
      */
     private $idutilisateur;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Commande", mappedBy="idproduit")
-     */
-    private $idcommande;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->idcommande = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     public function getIdproduit()
@@ -156,7 +149,7 @@ class Produit
         return $this->idutilisateur;
     }
 
-    public function setIdutilisateur(Utilisateurs $idutilisateur)
+    public function setIdutilisateur(Utilisateur $idutilisateur)
     {
         $this->idutilisateur = $idutilisateur;
 
@@ -169,25 +162,6 @@ class Produit
     public function getIdcommande()
     {
         return $this->idcommande;
-    }
-
-    public function addIdcommande(Commande $idcommande)
-    {
-        if (!$this->idcommande->contains($idcommande)) {
-            $this->idcommande[] = $idcommande;
-            $idcommande->addIdproduit($this);
-        }
-
-        return $this;
-    }
-
-    public function removeIdcommande(Commande $idcommande)
-    {
-        if ($this->idcommande->removeElement($idcommande)) {
-            $idcommande->removeIdproduit($this);
-        }
-
-        return $this;
     }
 
 }

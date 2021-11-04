@@ -2,7 +2,7 @@
 namespace App\Controller\Utilisateurs\Producteur;
 
 use App\Controller\ActionController;
-use App\Repository\UtilisateursRepository;
+use App\Repository\UtilisateurRepository;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 
@@ -11,7 +11,7 @@ class ListeProducteursAction extends ActionController{
     public $container;
     public $repository;
 
-    public function __construct(ContainerInterface $container, UtilisateursRepository $repository)
+    public function __construct(ContainerInterface $container, UtilisateurRepository $repository)
     {
         $this->container = $container;
         $this->repository = $repository;
