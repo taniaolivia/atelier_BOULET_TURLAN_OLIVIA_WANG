@@ -6,7 +6,7 @@
 
 {% block main %}
     {% for produits in produits %}
-        <p><a href={{ url_for('detailproduit', {'produit' : produits.nomProduit }) }}>{{ produits.nomProduit }}</a></p>
+        <p><a href={{ url_for('detailproduit', {'produit' : produits.idProduit }) }}>{{ produits.nomProduit }}</a></p>
     {% endfor %}
 {% endblock %}
 

@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Produit;
 use App\Entity\Utilisateurs;
 use Doctrine\ORM\EntityManager;
 
@@ -19,7 +20,7 @@ class UtilisateursRepository
         $query = $this->em->getConnection()->createQueryBuilder();
 
         $rows = $query
-            ->select('nomUtilisateur')
+            ->select('idUtilisateur, nomUtilisateur')
             ->from('Utilisateurs')
             ->where('roleId = :roleId')
             ->setParameter('roleId', $roleId)
@@ -29,9 +30,19 @@ class UtilisateursRepository
         return $rows;
     }
 
-    public function findProducteurByName(string $nomProducteur): Utilisateurs
+    public function findProducteurById(int $idUtilisateur)
     {
-        $producteur = $this->em->getRepository(Utilisateurs::class)->findOneBy(['nomutilisateur'=> $nomProducteur]);
-        return $producteur;
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('nomUtilisateur, mail, numTel')
+            ->from('Utilisateurs')
+            ->where('idUtilisateur = :idUtilisateur')
+            ->setParameter('idUtilisateur', $idUtilisateur)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
     }
+
 }

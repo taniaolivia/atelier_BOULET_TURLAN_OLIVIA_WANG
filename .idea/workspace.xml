@@ -22,8 +22,12 @@
     <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="new entity 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Produit/DetailProduitAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Produit/DetailProduitAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Utilisateurs/Producteur/DetailProducteurAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Utilisateurs/Producteur/DetailProducteurAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Utilisateurs/Producteur/ListeProducteursAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Utilisateurs/Producteur/ListeProducteursAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/UtilisateursRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UtilisateursRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vue/produit/detailProduit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/produit/detailProduit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/produit/listeProduits.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/produit/listeProduits.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vue/utilisateurs/producteur/detailProducteur.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/utilisateurs/producteur/detailProducteur.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vue/utilisateurs/producteur/listeProducteurs.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/utilisateurs/producteur/listeProducteurs.html.twig" afterDir="false" />
     </list>
