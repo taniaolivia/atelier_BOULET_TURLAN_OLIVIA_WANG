@@ -15,6 +15,7 @@
 }
 
 @media screen and (min-width: 1000px) {
+    /*-----spécial accueil-----*/
     html, body{
         margin: 0;
         font-family: Chalkboard, serif;
@@ -237,5 +238,29 @@
 
     .content-product-infos{
         width: 400px;
+    }
+
+    /*-----spécial panier -----*/
+    .backcolor-product-infos {
+        background-color: rgba(4, 4, 4, 0.2);
+    }
+
+    .padding-product-infos{
+        padding: 20px;
+    }
+
+    .btn-valider{
+        width: 100%;
+    }
+
+    .content-panier{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-column-gap: 20px;
+        margin: 2%;
+    }
+
+    .border-unset{
+        border: unset;
     }
 }

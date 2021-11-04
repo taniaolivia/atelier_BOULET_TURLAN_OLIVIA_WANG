@@ -76,6 +76,13 @@ $third-color-default: black !default;
     padding: 10px 20px;
   }
 
+  @if($type == "panier"){
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-column-gap: 20px;
+    margin: 2%;
+  }
+
   @if($type == "details"){
     width: 100%;
     height: 380px;
@@ -166,6 +173,10 @@ $third-color-default: black !default;
     width: 100%;
     margin-bottom: 1%;
   }
+
+  @if($type == "valider"){
+    width: 100%;
+  }
 }
 
 @mixin footer{
@@ -227,11 +238,17 @@ $third-color-default: black !default;
   }
 }
 
+@mixin backcolor-product-infos{
+  @include background-color(rgba(4, 4, 4, 0.2));
+}
 
+@mixin padding-product-infos{
+  padding: 20px;
+}
 
-
-
-
+@mixin border-unset{
+  border: unset;
+}
 
 
 

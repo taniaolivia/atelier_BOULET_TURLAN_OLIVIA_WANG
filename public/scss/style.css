@@ -1709,5 +1709,29 @@ nav {
     width: 400px;
   }
 }
+@media screen and (min-width: 1000px) {
+  .backcolor-product-infos {
+    background-color: rgba(4, 4, 4, 0.2) !important;
+  }
+
+  .padding-product-infos {
+    padding: 20px;
+  }
+
+  .btn-valider {
+    width: 100%;
+  }
+
+  .content-panier {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-column-gap: 20px;
+    margin: 2%;
+  }
+
+  .border-unset {
+    border: unset;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
