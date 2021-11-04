@@ -3,7 +3,7 @@ namespace App\Controller\Produit;
 
 use App\Controller\ActionController;
 use App\Repository\ProduitRepository;
-use App\Repository\UtilisateursRepository;
+use App\Repository\UtilisateurRepository;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 
@@ -11,12 +11,13 @@ class DetailProduitAction extends ActionController{
 
     public $container;
     public $produitRepository;
-    public $utilisateursRepository;
+    public $utilisateurRepository;
 
-    public function __construct(ContainerInterface $container, ProduitRepository $repository)
+    public function __construct(ContainerInterface $container, ProduitRepository $produitRepository, UtilisateurRepository $utilisateurRepository)
     {
         $this->container = $container;
-        $this->repository = $repository;
+        $this->produitRepository = $produitRepository;
+        $this->utilisateurRepository = $utilisateurRepository;
     }
 
     protected function action():Response

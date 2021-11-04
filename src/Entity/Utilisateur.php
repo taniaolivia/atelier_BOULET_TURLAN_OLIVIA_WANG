@@ -7,10 +7,10 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Utilisateurs
  *
- * @ORM\Table(name="utilisateurs")
+ * @ORM\Table(name="utilisateur")
  * @ORM\Entity
  */
-class Utilisateurs
+class Utilisateur
 {
     /**
      * @var int
@@ -57,9 +57,9 @@ class Utilisateurs
     private $roleid;
 
     /**
-     * @var int|null
+     * @var string|null
      *
-     * @ORM\Column(name="numTel", type="integer", nullable=true)
+     * @ORM\Column(name="numTel", type="string", length=255, nullable=true)
      */
     private $numtel;
 

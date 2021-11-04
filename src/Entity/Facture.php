@@ -22,9 +22,9 @@ class Facture
     private $numfacture;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="montant", type="integer", nullable=false)
+     * @ORM\Column(name="montant", type="string", length=255, nullable=false)
      */
     private $montant;
 

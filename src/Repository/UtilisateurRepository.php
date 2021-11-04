@@ -3,10 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Produit;
-use App\Entity\Utilisateurs;
+use App\Entity\Utilisateur;
 use Doctrine\ORM\EntityManager;
 
-class UtilisateursRepository
+class UtilisateurRepository
 {
     public $em;
 
@@ -21,7 +21,7 @@ class UtilisateursRepository
 
         $rows = $query
             ->select('idUtilisateur, nomUtilisateur')
-            ->from('Utilisateurs')
+            ->from('Utilisateur')
             ->where('roleId = :roleId')
             ->setParameter('roleId', $roleId)
             ->execute()
@@ -36,7 +36,7 @@ class UtilisateursRepository
 
         $rows = $query
             ->select('nomUtilisateur, mail, numTel')
-            ->from('Utilisateurs')
+            ->from('Utilisateur')
             ->where('idUtilisateur = :idUtilisateur')
             ->setParameter('idUtilisateur', $idUtilisateur)
             ->execute()
