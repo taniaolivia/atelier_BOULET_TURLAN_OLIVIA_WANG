@@ -1,20 +1,32 @@
 <?php
-declare(strict_types=1);
 
 namespace App\Repository;
+
 use App\Entity\Commande;
+use Doctrine\ORM\EntityManager;
 
-interface CommandeRepository
+class CommandeRepository
 {
-    /**
-     * @return Commande[]
-     */
-    public function findAll(): array;
+    public $em;
 
-    /**
-     * @param  int $id
-     * @return Commande
-     * @throws CommandeNotFoundException
-     */
-    public function findCommandeOfId(int $id): Commande;
+    public function __construct(EntityManager $em)
+    {
+        $this->em = $em;
+    }
+
+    public function findAllCommandesWithClientName(): array
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $commandes = $query
+            ->select('c.*, u.nomUtilisateur')
+            ->from('commande', 'c')
+            ->leftJoin('c','utilisateurs','u', 'c.idUtilisateur = u.idUtilisateur')
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $commandes;
+    }
+
+    
 }

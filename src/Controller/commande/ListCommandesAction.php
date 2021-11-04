@@ -1,8 +1,8 @@
 <?php
-namespace App\Controller\commande;
+namespace App\Controller\Commande;
 
 use App\Controller\ActionController;
-
+use App\Repository\CommandeRepository;
 use Psr\Container\ContainerInterface;
 use Doctrine\ORM\EntityManager;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -10,19 +10,18 @@ use Psr\Http\Message\ResponseInterface as Response;
 class ListCommandesAction extends ActionController{
 
     public $container;
-    private $em;
     private $commandeRepository;
 
-    public function __construct(ContainerInterface $container,EntityManager $em)
+    public function __construct(ContainerInterface $container,CommandeRepository $commandeRepository)
     {
         $this->container = $container;
-        $this->em = $em;
-        $this->commandeRepository = $em->getRepository('App\Entity\Commande');
+        $this->commandeRepository = $commandeRepository;
     }
 
     protected function action():Response
     {
-        $commandes = $this->commandeRepository->findAll();
+        $commandes = $this->commandeRepository->findAllCommandesWithClientName();
+        var_dump($commandes);
         return $this->container->get('view')->render($this->response, 'commande/listCommandes.html.twig',[
             "commandes"=>$commandes
         ]);                

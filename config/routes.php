@@ -5,7 +5,7 @@ use App\Controller\Produit\ListeProduitsAction;
 use App\Controller\Produit\DetailProduitAction;
 use App\Controller\Utilisateurs\Producteur\ListeProducteursAction;
 use App\Controller\Utilisateurs\Producteur\DetailProducteurAction;
-use App\Controller\commande\ListCommandesAction;
+use App\Controller\Commande\ListCommandesAction;
 
 $app->get('/', AccueilAction::class);
 $app->get('/list-commandes', ListCommandesAction::class);
