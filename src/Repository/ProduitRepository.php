@@ -20,9 +20,34 @@ class ProduitRepository
         return $produits;
     }
 
-    public function findProduitByName(string $nomProduit): Produit
+    public function findProduitById(int $idProduit)
     {
-        $produit = $this->em->getRepository(Produit::class)->findOneBy(['nomproduit'=> $nomProduit]);
-        return $produit;
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('*')
+            ->from('produit')
+            ->where('idProduit = :idProduit')
+            ->setParameter('idProduit', $idProduit)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
+
+    public function findProducteurByProduit(int $idProduit)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('p.idUtilisateur, u.nomUtilisateur')
+            ->from('produit', 'p')
+            ->where('p.idProduit = :idProduit')
+            ->leftJoin('p', 'utilisateurs', 'u', 'p.idUtilisateur = u.idUtilisateur')
+            ->setParameter('idProduit', $idProduit)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
     }
 }

@@ -7,11 +7,16 @@
 {% endblock %}
 
 {% block main %}
-    {% if produit %}
+
+    {% for produit in produit %}
         <p>{{ produit.nomProduit }}</p>
         <p>{{ produit.description }}</p>
         <p>{{ produit.tarifUnitaire }}€</p>
-    {% endif %}
+    {% endfor %}
+    {% for producteur in producteur %}
+        <p><a href = {{ url_for('detailproducteur', {'producteur' : producteur.idUtilisateur }) }}>{{ producteur.nomUtilisateur }}</a></p>
+    {% endfor %}
+
 {% endblock %}
 
 

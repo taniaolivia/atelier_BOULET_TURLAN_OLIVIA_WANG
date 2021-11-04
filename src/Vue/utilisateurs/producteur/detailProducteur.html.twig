@@ -7,11 +7,11 @@
 {% endblock %}
 
 {% block main %}
-    {% if producteur %}
+    {% for producteur in producteur %}
         <p>{{ producteur.nomUtilisateur }}</p>
         <p>{{ producteur.mail }}</p>
         <p>{{ producteur.numTel }}</p>
-    {% endif %}
+    {% endfor %}
 {% endblock %}
 
 

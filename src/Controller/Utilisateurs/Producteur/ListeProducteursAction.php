@@ -20,6 +20,7 @@ class ListeProducteursAction extends ActionController{
     protected function action():Response
     {
         $producteurs = $this->repository->findAllProducteursByRole(1);
+
         return $this->container->get('view')->render($this->response, 'utilisateurs/producteur/listeProducteurs.html.twig', ['producteurs' => $producteurs]);
     }
 

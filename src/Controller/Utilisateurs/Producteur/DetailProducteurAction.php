@@ -19,7 +19,7 @@ class DetailProducteurAction extends ActionController{
 
     protected function action():Response
     {
-        $producteur = $this->repository->findProducteurByName($this->args['producteur']);
+        $producteur = $this->repository->findProducteurById($this->args['producteur']);
 
         return $this->container->get('view')->render($this->response, 'utilisateurs/producteur/detailProducteur.html.twig', ['producteur' => $producteur]);
     }
