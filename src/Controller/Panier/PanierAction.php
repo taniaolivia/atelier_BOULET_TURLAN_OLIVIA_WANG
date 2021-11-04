@@ -3,11 +3,12 @@ namespace App\Controller\Panier;
 
 use App\Controller\ActionController;
 use Psr\Container\ContainerInterface;
-
-use \Symfony\Component\HttpFoundation\Request;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 use Doctrine\ORM\EntityManager;
 use Psr\Log\LoggerInterface;
+
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Views\Twig;
@@ -24,14 +25,11 @@ class PanierAction extends ActionController {
         $this->commandeRepository = $em->getRepository('App\Entity\Commande');
     }
 
-    protected function action( Request $request)
+    protected function action():Response
     {
         //initPranier();
-        $session = $request->getSession();
-        $panier = $session->get('panier',[]);
-        $panier[$id] = 1;
-        $session->set('panier',$panier);
 
+        $_SESSION["ok"] = "dsfqqqqqqqqsdfqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq";
 
         //$commandes = $this->commandeRepository->findAll();
         return $this->container->get('view')->render($this->response, 'Panier/panier.html.twig',[
