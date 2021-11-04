@@ -1,0 +1,29 @@
+@import "constructeur";
+
+.content-colume > h1 {
+  @include sousTitre
+}
+
+.content-colume{
+  @include content_type("colume")
+}
+
+.content-liste{
+  @include content_type("liste")
+}
+
+.content-product{
+  @include content_type("product")
+}
+
+.content-product > .content-product-photo {
+  @include content-product-photo
+}
+
+.content-details-button{
+  @include content-details-button
+}
+
+.poids{
+  width: 100%;
+}
