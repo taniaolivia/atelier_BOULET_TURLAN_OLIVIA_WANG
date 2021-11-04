@@ -1,19 +1,23 @@
 @import "constructeur";
 
-.content-colume > h1 {
+.content-column > h1 {
   @include sousTitre
 }
 
-.content-colume{
-  @include content_type("colume")
+.content-column{
+  @include content_type("column")
 }
 
-.content-liste{
-  @include content_type("liste")
+.content-list{
+  @include content_type("list")
 }
 
 .content-product{
   @include content_type("product")
+}
+
+.content-product-details{
+  @include content_type("details")
 }
 
 .content-product > .content-product-photo {
@@ -24,6 +28,23 @@
   @include content-details-button
 }
 
+.btn-add{
+  @include button-type('add');
+}
+
+.btn-detail{
+  @include button-type('add');
+}
+
 .poids{
-  width: 100%;
+  margin-left: 40px;
+  width: 50px;
+}
+
+.product-name{
+  font-weight: bold;
+  text-align: center;
+  background-color: steelblue;
+  padding: 10px;
+  margin: -20px 0 0 -10px;
 }

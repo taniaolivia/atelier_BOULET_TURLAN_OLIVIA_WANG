@@ -11,7 +11,8 @@
     </head>
     <body>
         <header>
-                {% include 'navbar.html.twig' %}
+            {% block header %}
+            {% endblock %}
         </header>
         <main>
             {% block main %}

@@ -1,13 +1,49 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
+{% block title %}Liste des produits{% endblock %}
 
+{% block header %}
+    {% include 'navbar.html.twig' %}
 {% endblock %}
 
 {% block main %}
+<div class="content-column">
+    <h1>Liste des produits</h1>
+
+    <select class="content-select">
+        <option value="option-fruit">Fruit</option>
+        <option value="option-legume">Légume</option>
+        <option value="option-viande">Viande</option>
+    </select>
+
+    <div class="content-list">
     {% for produits in produits %}
-        <p><a href={{ url_for('detailproduit', {'produit' : produits.idProduit }) }}>{{ produits.nomProduit }}</a></p>
+            <div class="content-product">
+                <div class="content-product-photo">
+                    <img src={{ base_path() }}"/images/logo_2.png">
+                </div>
+                <div class="content-product-details">
+                    <form method="#" action="#">
+                        <br>
+                        <p class="product-name">{{ produits.nomProduit }}</p>
+                        <br>
+                        <p>Quantité (par kg)<input type="text" class="poids" name="poids"></p>
+                        <div class="content-details-button">
+                            <button class="btn-add">Ajouter au panier</button>
+                            <button class="btn-detail">
+                                <a href={{ url_for('detailproduit', {'produit' : produits.idProduit }) }}>
+                                    Voir le détail
+                                </a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
     {% endfor %}
+    </div>
+</div>
+
+
 {% endblock %}
 
 

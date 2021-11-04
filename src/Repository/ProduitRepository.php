@@ -50,4 +50,34 @@ class ProduitRepository
 
         return $rows;
     }
+
+    public function findAllProduitById(int $idProduit)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('nomProduit')
+            ->from('produit')
+            ->where('idProduit = :idProduit')
+            ->setParameter('idProduit', $idProduit)
+            ->execute()
+            ->fetchOne();
+
+        return $rows;
+    }
+
+    public function findAllProduitByName(string $nomProduit)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('idProduit')
+            ->from('produit')
+            ->where('nomProduit = :nomProduit')
+            ->setParameter('nomProduit', $nomProduit)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
 }

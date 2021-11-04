@@ -9,8 +9,8 @@
     @include content-photo("petit")
   }
 
-  .content-product-similaires{
-    @include content-product("similaires")
+  .content-product-similar{
+    @include content-product("similar")
   }
 
   .content-details{
@@ -20,4 +20,19 @@
   .content-product-infos{
     @include content-product("infos")
   }
+}
+
+.product-similar {
+  margin: 0 0 0 20px;
+  font-weight: bold;
+}
+
+.product-img{
+  margin: 20px 0 0 20px;
+}
+
+.container-product-similar{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
