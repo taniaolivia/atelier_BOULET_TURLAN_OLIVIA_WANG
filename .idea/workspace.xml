@@ -19,15 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="new entity 2">
-      <change afterPath="$PROJECT_DIR$/public/scss/_connexion.scss" afterDir="false" />
+    <list default="true" id="e19e0e4a-960c-4d53-b4b3-b7c3e6d0a522" name="Changes" comment="pull 04/11 ok">
+      <change afterPath="$PROJECT_DIR$/src/Controller/Panier/PanierAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Vue/Panier/panier.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Vue/Panier/panierVue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/atelier_BOULET_TURLAN_OLIVIA_WANG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/atelier_BOULET_TURLAN_OLIVIA_WANG.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/_constructeur.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/_constructeur.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/web/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web/html/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/web/html/Accueil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web/html/Connexion.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/web/html/Connexion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,52 +50,53 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/php-di/php-di" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/php-di/phpdoc-reader" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/vendor/slim/psr7" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/slim/slim" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/slim/twig-view" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/opis/closure" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-server-handler" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/psr/http-server-middleware" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-server-handler" />
-      <path value="$PROJECT_DIR$/vendor/fig/http-message-util" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/slim/twig-view" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/fig/http-message-util" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
     </include_path>
   </component>
   <component name="ProjectId" id="20OsFRXj2zXtf374fR2LwNw5PoR" />
@@ -109,7 +110,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Entity" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Documents/Guillaume/Cours_LCP/PHP_Programmation_web_sur_le_serveur/Project_Slim_4/Exemple/project_covid" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -125,6 +126,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PROJECT_LCP\atelier_BOULET_TURLAN_OLIVIA_WANG\src\Vue\Panier" />
+      <recent name="C:\xampp\htdocs\PROJECT_LCP\atelier_BOULET_TURLAN_OLIVIA_WANG\src\Controller" />
       <recent name="C:\xampp\htdocs\PROJECT_LCP\atelier_BOULET_TURLAN_OLIVIA_WANG\src\Entity" />
     </key>
   </component>
@@ -145,6 +148,8 @@
       <workItem from="1635964497590" duration="412000" />
       <workItem from="1635965032365" duration="202000" />
       <workItem from="1635965267354" duration="5547000" />
+      <workItem from="1636031627949" duration="68000" />
+      <workItem from="1636031804263" duration="6073000" />
     </task>
     <task id="LOCAL-00001" summary="entity problem creat">
       <created>1635948633204</created>
@@ -189,13 +194,19 @@
     <MESSAGE value="entity problem creat" />
     <MESSAGE value="new entity" />
     <MESSAGE value="new entity 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="new entity 2" />
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="437" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1635968991652">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="466" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636019896749">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="437" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1635968991652" />
+    <state x="466" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636019896749" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1636018938274">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636018938274" />
     <state x="545" y="325" width="445" height="264" key="ComposerInitDialogKey" timestamp="1635930199568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -204,10 +215,15 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="375" y="232" key="EditFileWatcherDialog/0.0.1440.900@0.0.1440.900" timestamp="1635969720351" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1635949344253">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1636025965756">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636025965756" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1635949344253" />
+    <state x="432" y="135" key="NewPhpClassDialog" timestamp="1636018878557">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="432" y="135" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636018878557" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1635949825727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -216,9 +232,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1635935114894" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1635948867885">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1636055860794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1360.728@0.0.1536.824" timestamp="1636055860794" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1635948867885" />
   </component>
 </project>

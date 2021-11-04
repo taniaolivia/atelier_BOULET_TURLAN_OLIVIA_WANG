@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block main %}
+
+    <form method="post" action="PanierAction.php">
+        <table style="width: 400px">
+            <tr>
+                <td colspan="4">Votre panier</td>
+            </tr>
+            <tr>
+                <td>Libellé</td>
+                <td>Quantité</td>
+                <td>Prix Unitaire</td>
+                <td>Action</td>
+            </tr>
+            <tr>
+                <td>Votre panier est vide</td>
+            </tr>
+            {{ app.session.get('panier') }}
+            {# <tr> #}
+            {# <td>{panier.titre}</td> #}
+            {# <td><input type="text" size="4" name="q" value="{panier.quantiter}"/></td>"; #}
+            {# <td>{panier.prix}</td>"; #}
+            {# <td><a href="{{ path ( 'panier.edit', {id: panier.id }) }}">X</a></td>"; #}
+            {# </tr>"; #}
+
+
+            <tr>
+                <td colspan="2"></td>
+
+                <td colspan="2">
+                    {# Total : .MontantGlobal(); #}
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="4">
+                    <input type="submit" value="Rafraichir"/>
+                    <input type="hidden" name="action" value="refresh">
+
+                    <a href="/panier">add</a>
+
+                </td>
+            </tr>
+
+
+
+        </table>
+    </form>
+
+{% endblock %}
