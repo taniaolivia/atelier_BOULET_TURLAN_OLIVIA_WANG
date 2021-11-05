@@ -1,0 +1,233 @@
+@import "constructeur";
+
+html, body{
+  margin: 0;
+  @include font-family;
+}
+
+li:hover{
+  @include hover;
+}
+
+header{
+  @include header;
+}
+
+a{
+  @include a;
+}
+
+a:hover{
+  @include hover;
+}
+
+.content-text{
+  @include content-type("text");
+}
+
+footer{
+  @include footer;
+}
+
+#content-connexion{
+  @include content-type("connexion");
+}
+
+#content-connexion h1{
+  @include sousTitre;
+}
+
+input{
+  @include input;
+}
+
+#input-login, #input-password{
+  @include input-type("login");
+  @include input-type("password");
+}
+
+button {
+  @include button;
+}
+
+button:hover {
+  @include hover(dodgerblue, white);
+}
+
+.btn-connexion{
+  @include btn-type("connexion");
+}
+
+#header-recherche{
+  @include header-type("recherche");
+}
+
+.header-panier {
+  @include header-type("panier");
+  padding: 0;
+}
+
+ul{
+  @include ul;
+}
+
+.content-photo-grand{
+  @include content-photo("grand");
+}
+
+.content-photo-petit{
+  @include content-photo("petit");
+}
+
+.content-product-similaires{
+  @include content-product("similaires");
+}
+
+.content-product-infos{
+  @include content-product("infos");
+}
+
+.scroll{
+  @include scroll;
+}
+
+.large{
+  @include large;
+}
+
+.content-colume > h1 {
+  @include content-colume-h1;
+}
+
+.content-colume{
+  @include content-type("colume");
+}
+
+.content-product {
+  @include content-type("product");
+}
+
+.content-product > .content-product-photo {
+  @include content-product("photo");
+}
+
+.content-details-button{
+  @include content-details-button;
+}
+
+.poids{
+  @include poids;
+}
+
+.backcolor-product-infos {
+  @include backcolor-product-infos;
+}
+
+.padding-product-infos{
+  @include padding-product-infos;
+}
+
+.btn-valider{
+  @include btn-type("valider");
+}
+
+.content-panier{
+  @include content-type("panier");
+}
+
+.border-unset{
+  @include border-unset;
+}
+
+.content-tableau{
+  @include content-tableau;
+}
+
+.content-tableau th {
+  @include th;
+}
+
+.content-tableau tr:nth-child(even) {
+  @include tr;
+}
+
+.recherche{
+  @include recherche;
+}
+
+@media screen and (max-width: 400px) {
+  .header-container{
+    @include header-container(column, fit-content);
+  }
+
+  li{
+    @include li-structure(20px, 30px, 20px, 30px, 100%);
+  }
+
+  #couverture{
+    @include couverture;
+  }
+
+  .padding{
+    @include padding;
+  }
+
+  .connexion{
+    @include connexion;
+  }
+
+  .content-liste{
+    @include content-liste(1);
+  }
+
+  .content-details{
+    @include content-details(fit-content, "rows");
+  }
+
+}
+
+@media screen and (min-width: 400px) {
+  .header-container{
+    @include header-container(column, inherit);
+  }
+
+  li{
+    @include li-structure(5px, 5px, 5px, 5px, 100%);
+  }
+
+  .connexion{
+    @include connexion;
+  }
+
+  .content-liste{
+    @include content-liste(2);
+  }
+
+  .content-details{
+    @include content-details(fit-content, "rows");
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  li{
+    @include li-structure(20px, 30px, 20px, 30px, fit-content);
+  }
+
+  .header-container{
+    @include header-container(row, inherit);
+  }
+
+  .content{
+    @include content;
+  }
+
+  .content-liste{
+    @include content-liste(4);
+  }
+
+  .content-details{
+    @include content-details(400px, "columns");
+  }
+
+}
