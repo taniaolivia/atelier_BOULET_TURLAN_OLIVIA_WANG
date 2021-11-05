@@ -6,7 +6,7 @@ use App\Entity\Produit;
 use App\Entity\Utilisateur;
 use Doctrine\ORM\EntityManager;
 
-class UtilisateurRepository
+class UtilisateurRepository 
 {
     public $em;
 
@@ -39,6 +39,19 @@ class UtilisateurRepository
             ->from('Utilisateur')
             ->where('idUtilisateur = :idUtilisateur')
             ->setParameter('idUtilisateur', $idUtilisateur)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
+    public function findUtilisateurByMail(string $mail){
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('*')
+            ->from('Utilisateur')
+            ->where('mail = :mail')
+            ->setParameter('mail', $mail)
             ->execute()
             ->fetchAllAssociative();
 
