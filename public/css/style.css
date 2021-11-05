@@ -357,6 +357,10 @@ picture {
     padding: 20px;
   }
 
+  .content-text {
+    font-size: 15px;
+  }
+
   .header-container {
     display: flex;
     flex-direction: column;
@@ -371,7 +375,8 @@ picture {
     border: 2px solid black;
     box-sizing: border-box;
     width: 100%;
-    padding: 20px 30px 20px 30px;
+    padding: 5px 30px 5px 30px;
+    font-size: 12px;
   }
 
   #couverture {

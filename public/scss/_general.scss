@@ -222,12 +222,17 @@ picture{
     @include content-column-h1(20px);
   }
 
+  .content-text{
+    font-size: 15px;
+  }
+
   .header-container{
     @include header-container(column, fit-content);
   }
 
   li{
-    @include li-structure(20px, 30px, 20px, 30px, 100%);
+    @include li-structure(5px, 30px, 5px, 30px, 100%);
+    font-size: 12px;
   }
 
   #couverture{
