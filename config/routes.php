@@ -1,4 +1,6 @@
 <?php
+
+use App\Controller\Produit\RechercheProduitsProducteurAction;
 use Slim\Routing\RouteCollectorProxy;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -9,6 +11,7 @@ use App\Controller\Produit\DetailProduitAction;
 use App\Controller\Utilisateurs\Connexion\ConnexionAction;
 use App\Controller\Utilisateurs\Producteur\ListeProducteursAction;
 use App\Controller\Utilisateurs\Producteur\DetailProducteurAction;
+use App\Controller\Produit\RechercheProduitsAction;
 use App\Controller\Utilisateurs\Gerant\ListCommandesAction;
 use App\Controller\Utilisateurs\Gerant\ViewDetailCommandAction;
 use App\Controller\Utilisateurs\Gerant\ViewDashboardAction;
@@ -19,6 +22,8 @@ use App\Controller\Panier\SuppressionPanierAction;
 $app->get('/', AccueilAction::class);
 $app->get('/nosproduits', ListeProduitsAction::class)->setName('nosproduits');
 $app->get('/nosproduits/{produit}', DetailProduitAction::class)->setName('detailproduit');
+$app->get('/nosproduits/recherche/{categories}', RechercheProduitsAction::class)->setName('recherchecategorie');
+$app->get('/nosproduits/recherches/{producteur}', RechercheProduitsProducteurAction::class)->setName('rechercheproducteur');
 $app->get('/nosproducteurs', ListeProducteursAction::class)->setName('nosproducteurs');
 $app->get('/nosproducteurs/{producteur}', DetailProducteurAction::class)->setName('detailproducteur');
 
