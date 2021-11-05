@@ -1,5 +1,6 @@
 <?php
 
+use App\Controller\Produit\RechercheProduitsProducteurAction;
 use Slim\Routing\RouteCollectorProxy;
 
 use App\Controller\Accueil\AccueilAction;
@@ -15,6 +16,7 @@ $app->get('/', AccueilAction::class);
 $app->get('/nosproduits', ListeProduitsAction::class)->setName('nosproduits');
 $app->get('/nosproduits/{produit}', DetailProduitAction::class)->setName('detailproduit');
 $app->get('/nosproduits/recherche/{categories}', RechercheProduitsAction::class)->setName('recherchecategorie');
+$app->get('/nosproduits/recherches/{producteur}', RechercheProduitsProducteurAction::class)->setName('rechercheproducteur');
 $app->get('/nosproducteurs', ListeProducteursAction::class)->setName('nosproducteurs');
 $app->get('/nosproducteurs/{producteur}', DetailProducteurAction::class)->setName('detailproducteur');
 

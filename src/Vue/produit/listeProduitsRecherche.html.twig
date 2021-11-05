@@ -13,13 +13,20 @@
             <button class="dropbtn">Trier par
                 <i class="fa fa-caret-down"></i>
             </button>
-        {% for categorie in categorie %}
+
             <div class="dropdown-content">
-                <a href={{ url_for('recherchecategorie', {'categories' : categorie.idCategorie })}}>
-                    {{ categorie.nomCategorie }}
-                </a>
+                {% for categorie in categorie %}
+                    <a href={{ url_for('recherchecategorie', {'categories' : categorie.idCategorie })}}>
+                        {{ categorie.nomCategorie }}
+                    </a>
+                {% endfor %}
+                {% for producteur in producteur %}
+                    <a href={{ url_for('rechercheproducteur', {'producteur' : producteur.idUtilisateur })}}>
+                        Producteur {{ producteur.idUtilisateur }}
+                    </a>
+                {% endfor %}
             </div>
-        {% endfor %}
+
     </div>
 
     <div class="content-list">

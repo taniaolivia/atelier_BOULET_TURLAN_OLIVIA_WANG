@@ -9,28 +9,26 @@
 {% block main %}
 <div class="content-column">
     <h1>Liste des produits</h1>
-    <div class="dropdown">
-            <button class="dropbtn">Trier par
-                <i class="fa fa-caret-down"></i>
-            </button>
-
-        <div class="dropdown-content">
-            {% for categorie in categorie %}
-                <a href={{ url_for('recherchecategorie', {'categories' : categorie.idCategorie })}}>
-                    {{ categorie.nomCategorie }}
-                </a>
-            {% endfor %}
-            {% for producteur in producteur %}
-                <a href={{ url_for('rechercheproducteur', {'producteur' : producteur.idUtilisateur })}}>
-                    Producteur {{ producteur.idUtilisateur }}
-                </a>
-            {% endfor %}
+    <button class="btn-drop">
+        Trier par<i class="fa fa-caret-down"></i>
+        <div class="drop-down">
+            <ul class="drop-down-content">
+                {% for categorie in categorie %}
+                    <a href={{ url_for('recherchecategorie', {'categories' : categorie.idCategorie })}}>
+                        {{ categorie.nomCategorie }}
+                    </a>
+                {% endfor %}
+                {% for producteur in producteur %}
+                    <a href={{ url_for('rechercheproducteur', {'producteur' : producteur.idUtilisateur })}}>
+                        Producteur {{ producteur.idUtilisateur }}
+                    </a>
+                {% endfor %}
+            </ul>
         </div>
-    </div>
+   </button>
 
     <div class="content-list">
-
-    {% for produits in produits %}
+    {% for recherche in recherches %}
             <div class="content-product">
                 <div class="content-product-photo">
                     <img src={{ base_path() }}"/images/logo_2.png">
@@ -38,13 +36,13 @@
                 <div class="content-product-details">
                     <form method="#" action="#">
                         <br>
-                        <p class="product-name">{{ produits.nomProduit }}</p>
+                        <p class="product-name">{{ recherche.nomProduit }}</p>
                         <br>
                         <p>Quantité (par kg)<input type="text" class="poids" name="poids"></p>
                         <div class="content-details-button">
                             <button class="btn-add">Ajouter au panier</button>
                             <button class="btn-detail">
-                                <a href={{ url_for('detailproduit', {'produit' : produits.idProduit }) }}>
+                                <a href={{ url_for('detailproduit', {'produit' : recherche.idProduit }) }}>
                                     Voir le détail
                                 </a>
                             </button>

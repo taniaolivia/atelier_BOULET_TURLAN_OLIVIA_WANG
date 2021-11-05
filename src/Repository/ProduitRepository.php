@@ -109,4 +109,19 @@ class ProduitRepository
 
         return $rows;
     }
+
+    public function findProduitByProducteur(int $idUtilisateur)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('idProduit, nomProduit')
+            ->from('produit')
+            ->where('idUtilisateur = :idUtilisateur')
+            ->setParameter('idUtilisateur', $idUtilisateur)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
 }
