@@ -438,4 +438,9 @@ $third-color-default: black !default;
   text-align: left;
 }
 
+@mixin li-panier{
+  border: none;
+  padding-top: 10px;
+}
+
 

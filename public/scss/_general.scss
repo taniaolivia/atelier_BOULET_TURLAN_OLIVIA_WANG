@@ -213,6 +213,10 @@ picture{
   @include drop-down-content-a;
 }
 
+#li-panier{
+  @include li-panier;
+}
+
 @media screen and (max-width: 400px) {
   .content-column > h1 {
     @include content-column-h1(20px);
@@ -283,7 +287,7 @@ picture{
   }
 
   li{
-    @include li-structure(20px, 30px, 20px, 30px, fit-content);
+    @include li-structure(20px, 15px, 20px, 15px, 100%);
   }
 
   .header-container{
