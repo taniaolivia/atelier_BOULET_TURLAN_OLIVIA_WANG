@@ -32,9 +32,9 @@
             <br>
             <div class="container-product-similar">
                 {% for similaire in similaire %}
-                    <p><a href={{ url_for('detailproduit', {'produit' : similaire.idProduit }) }}>
-                            <img class="content-product-photo content-photo-petit product-img" src={{ base_path() }}"/images/logo_2.png">
-                        </a></p>
+                    <a href={{ url_for('detailproduit', {'produit' : similaire.idProduit }) }}>
+                        <img class="content-product-photo content-photo-petit product-img" src={{ base_path() }}"/images/logo_2.png">
+                    </a>
                 {% endfor %}
             </div>
         </div>

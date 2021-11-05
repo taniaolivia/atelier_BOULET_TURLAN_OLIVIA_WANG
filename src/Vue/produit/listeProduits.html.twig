@@ -27,10 +27,10 @@
                         <br>
                         <p class="product-name">{{ produits.nomProduit }}</p>
                         <br>
-                        <p>Quantité (par kg)<input type="text" class="poids" name="poids"></p>
+                        <p class="quantity">Quantité (par kg)<input type="text" class="poids" name="poids"></p>
                         <div class="content-details-button">
                             <button class="btn-add">Ajouter au panier</button>
-                            <button class="btn-detail">
+                            <button class="btn-add">
                                 <a href={{ url_for('detailproduit', {'produit' : produits.idProduit }) }}>
                                     Voir le détail
                                 </a>
