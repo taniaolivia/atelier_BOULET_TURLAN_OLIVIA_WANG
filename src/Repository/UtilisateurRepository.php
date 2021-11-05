@@ -21,7 +21,7 @@ class UtilisateurRepository
 
         $rows = $query
             ->select('idUtilisateur, nomUtilisateur')
-            ->from('Utilisateur')
+            ->from('utilisateur')
             ->where('roleId = :roleId')
             ->setParameter('roleId', $roleId)
             ->execute()
@@ -36,7 +36,7 @@ class UtilisateurRepository
 
         $rows = $query
             ->select('nomUtilisateur, mail, numTel')
-            ->from('Utilisateur')
+            ->from('utilisateur')
             ->where('idUtilisateur = :idUtilisateur')
             ->setParameter('idUtilisateur', $idUtilisateur)
             ->execute()
