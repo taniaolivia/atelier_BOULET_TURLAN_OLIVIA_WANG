@@ -341,6 +341,11 @@ picture {
   text-align: left;
 }
 
+#li-panier {
+  border: none;
+  padding-top: 10px;
+}
+
 @media screen and (max-width: 400px) {
   .content-column > h1 {
     width: 100%;
@@ -482,8 +487,8 @@ picture {
     text-align: center;
     border: 2px solid black;
     box-sizing: border-box;
-    width: fit-content;
-    padding: 20px 30px 20px 30px;
+    width: 100%;
+    padding: 20px 15px 20px 15px;
   }
 
   .header-container {
