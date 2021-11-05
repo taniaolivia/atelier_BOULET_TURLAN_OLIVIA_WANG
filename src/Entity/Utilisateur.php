@@ -12,6 +12,24 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Utilisateur
 {
+    public function __construct(
+        ?int $idutilisateur,
+        string $nomutilisateur,
+        string $adresse,
+        string $mail,
+        string $motdepasse,
+        ?string $roleid,
+        ?string $numtel
+    ) {
+        $this->idutilisateur = $idutilisateur;
+        $this->nomutilisateur = $nomutilisateur;
+        $this->adresse = $adresse;
+        $this->motdepasse = $motdepasse;
+        $this->numtel = $numtel;
+        $this->roleid = $roleid;
+        $this->mail = $mail;
+    }
+
     /**
      * @var int
      *
@@ -56,6 +74,8 @@ class Utilisateur
      */
     private $roleid;
 
+
+
     /**
      * @var string|null
      *
@@ -66,6 +86,11 @@ class Utilisateur
     public function getIdutilisateur()
     {
         return $this->idutilisateur;
+    }
+
+    public function setIdutilisateur($idutilisateur)
+    {
+        $this->idutilisateur = $idutilisateur;
     }
 
     public function getNomutilisateur()
