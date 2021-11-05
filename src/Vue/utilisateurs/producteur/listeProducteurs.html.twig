@@ -7,9 +7,24 @@
 {% endblock %}
 
 {% block main %}
-    {% for producteurs in producteurs %}
-       <p><a href={{ url_for('detailproducteur', {'producteur' : producteurs.idUtilisateur }) }}>{{ producteurs.nomUtilisateur }}</a></p>
-    {% endfor %}
+<div class="content-column">
+    <h1>Liste des producteurs</h1>
+
+    <div class="content-list">
+        {% for producteurs in producteurs %}
+            <a href={{ url_for('detailproducteur', {'producteur' : producteurs.idUtilisateur }) }}>
+                <div class="content-product">
+                    <div class="content-product-photo">
+                        <img src={{ base_path() }}"/images/logo_2.png">
+                    </div>
+                    <div class="content-product-details">
+                        <p>{{ producteurs.nomUtilisateur }}</p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
 
 
