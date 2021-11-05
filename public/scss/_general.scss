@@ -193,6 +193,26 @@ picture{
   @include content-buttons;
 }
 
+.btn-drop{
+  @include btn-type("drop");
+}
+
+.btn-drop:hover .drop-down-content {
+  @include drop-down-taille;
+}
+
+.drop-down{
+  @include drop-down;
+}
+
+.drop-down-content{
+  @include drop-down-content;
+}
+
+.drop-down-content a {
+  @include drop-down-content-a;
+}
+
 @media screen and (max-width: 400px) {
   .content-column > h1 {
     @include content-column-h1(20px);

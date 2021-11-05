@@ -135,6 +135,11 @@ $third-color-default: black !default;
     border: 1px solid #3762bc;
   }
 
+  @if($type == "drop"){
+    width: 160px;
+    padding: 5px;
+  }
+
   @if($type == "add"){
     width: 100%;
     border-right: 1px solid #3762bc;
@@ -394,4 +399,43 @@ $third-color-default: black !default;
   justify-content: center;
   margin: 2%;
 }
+
+
+@mixin drop-down-taille{
+  height: fit-content;
+  width: fit-content;
+}
+
+@mixin drop-down{
+  position: relative;
+  z-index: 9999;
+  height: fit-content;
+  border: unset;
+  margin: 15px 0 0 0;
+}
+
+@mixin drop-down-content{
+  margin: 0 0 0 -5px;
+  height: 0;
+  width: 0;
+  padding-left: 0;
+  display: flow;
+  color: black;
+  overflow: hidden;
+  position: absolute;
+  transition: all 1s ease;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+@mixin drop-down-content-a{
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
 
