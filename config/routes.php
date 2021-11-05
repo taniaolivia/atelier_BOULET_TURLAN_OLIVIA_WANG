@@ -52,6 +52,7 @@ $app->group('/gerant', function (RouteCollectorProxy $group) {
 });
 $app->group('/panier', function (RouteCollectorProxy $group) {
     $group->get('', function($request, $response, $args){
+
         return $this->get('view')->render($response, 'panier/panier.html.twig',[
             "session"=> $_SESSION
         ]);

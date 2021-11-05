@@ -23,14 +23,23 @@ class AjoutPanierAction extends ActionController{
     {
         $produitId = (int) $this->args['id'];
         $parsedBody = $this->request->getParsedBody();
+        $prix = $this->produitRepository->findPriceOfProduct($this->args['id']);
+        $nomProduit = $this->produitRepository->findPanierProduitName($this->args['id']);
+        var_dump($nomProduit);
         $quantite = htmlspecialchars($parsedBody['quantite']);
         if (isset($_SESSION['panier'])){
             $panier = ($_SESSION['panier']);
-            array_push($panier,array('idProduit'=>$produitId,'quantiteProduit'=>$quantite));
+            array_push($panier,array(
+                'idProduit' => $produitId,
+                'quantiteProduit' => $quantite,
+                'prix' => $prix[0]['tarifUnitaire'],
+                'nom' => $nomProduit[0]['nomProduit']));
         }else{
-            $panier = array(array('idProduit'=>$produitId,'quantiteProduit'=>$quantite));
+            $panier = array(array('idProduit'=>$produitId,'quantiteProduit'=>$quantite,'prix' => $prix[0]['tarifUnitaire'],
+                'nom' => $nomProduit[0]['nomProduit']));
         }
         $_SESSION['panier'] = ($panier);
+
 
         return $this->response
             ->withHeader('location','/nosproduits')

@@ -30,7 +30,7 @@ class SuppressionPanierAction extends ActionController{
             $nouveauPanier = [];
             foreach ($panier as $ligne) {
                 if($ligne['idProduit'] != $produitId && $ligne['quantiteProduit'] != $quantite){
-                    array_push($nouveauPanier,$ligne);
+                    array_push($nouveauPanier, $ligne);
                 }
             }
         }
