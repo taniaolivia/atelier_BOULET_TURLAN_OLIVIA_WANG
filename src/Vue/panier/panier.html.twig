@@ -16,6 +16,10 @@
             <input type="hidden" name="quantite" value="{{ligne.quantiteProduit}}">
             <button type="submit"class="btn-add">Supprimer</button>
         </form>
+        <form method="POST" action="{{ '/commande'}}">
+
+            <button type="submit"class="btn-add">commander</button>
+        </form>
 
     {% endfor %}
    

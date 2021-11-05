@@ -8,7 +8,7 @@ use Psr\Container\ContainerInterface;
 use Doctrine\ORM\EntityManager;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class AjoutPanierAction extends ActionController{
+class   AjoutPanierAction extends ActionController{
 
     public $container;
     private $produitRepository;
