@@ -9,8 +9,10 @@
         <li class="flex-li-dark">
             <a class="" href={{ url_for('nosproducteurs') }}>Nos producteurs</a>
         </li>
-        <li class="flex-li-dark">
-            <a class="" href="/connexion">Connexion</a>
-        </li>
+        {% if session.user %}
+        <li class="flex-li-dark"><a href="/deconnexion">Deconnexion</a></li>
+        {% else %}
+        <li class="flex-li-dark"><a href="/connexion">Connexion</a></li>
+        {% endif %}
     </ul>
 </nav>

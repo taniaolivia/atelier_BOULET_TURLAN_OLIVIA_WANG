@@ -21,7 +21,10 @@ class ListeProduitsAction extends ActionController{
     {
         $produits = $this->repository->findAllProduits();
 
-        return $this->container->get('view')->render($this->response, 'produit/listeProduits.html.twig', ['produits' => $produits]);
+        return $this->container->get('view')->render($this->response, 'produit/listeProduits.html.twig', [
+            'produits' => $produits,
+            "session"=>$_SESSION
+        ]);
     }
 
 }

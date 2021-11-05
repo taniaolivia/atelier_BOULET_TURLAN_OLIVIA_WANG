@@ -29,6 +29,8 @@ class DetailProduitAction extends ActionController{
         return $this->container->get('view')->render($this->response, 'produit/detailProduit.html.twig', [
             'produit' => $produit,
             'producteur' => $producteur,
-            'similaire' => $produit_similaire]);
+            'similaire' => $produit_similaire,
+            "session"=>$_SESSION]
+        );
     }
 }

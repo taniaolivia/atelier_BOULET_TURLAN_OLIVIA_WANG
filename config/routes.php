@@ -1,5 +1,7 @@
 <?php
 use Slim\Routing\RouteCollectorProxy;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 use App\Controller\Accueil\AccueilAction;
 use App\Controller\Produit\ListeProduitsAction;
@@ -27,6 +29,14 @@ $app->group('/connexion', function (RouteCollectorProxy $group){
     });
     $group->post('', ConnexionAction::class);
 });
+
+$app->get('/deconnexion', function (Request $request, Response $response) {
+    session_destroy();
+    return $response
+        ->withHeader('Location', '/')
+        ->withStatus(302);
+  }
+);
 
 $app->group('/gerant', function (RouteCollectorProxy $group) {
 
