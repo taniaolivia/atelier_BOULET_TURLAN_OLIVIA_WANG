@@ -9,24 +9,23 @@
 {% block main %}
 <div class="content-column">
     <h1>Liste des produits</h1>
-    <div class="dropdown">
-            <button class="dropbtn">Trier par
-                <i class="fa fa-caret-down"></i>
-            </button>
-
-        <div class="dropdown-content">
-            {% for categorie in categorie %}
-                <a href={{ url_for('recherchecategorie', {'categories' : categorie.idCategorie })}}>
-                    {{ categorie.nomCategorie }}
-                </a>
-            {% endfor %}
-            {% for producteur in producteur %}
-                <a href={{ url_for('rechercheproducteur', {'producteur' : producteur.idUtilisateur })}}>
-                    Producteur {{ producteur.idUtilisateur }}
-                </a>
-            {% endfor %}
+    <button class="btn-drop">
+        Trier par <img src={{ base_path() }}"/images/trier.png" alt="tirer.png">
+        <div class="drop-down">
+            <ul class="drop-down-content">
+                {% for categorie in categorie %}
+                    <a href={{ url_for('recherchecategorie', {'categories' : categorie.idCategorie })}}>
+                        {{ categorie.nomCategorie }}
+                    </a>
+                {% endfor %}
+                {% for producteur in producteur %}
+                    <a href={{ url_for('rechercheproducteur', {'producteur' : producteur.idUtilisateur })}}>
+                        Producteur {{ producteur.idUtilisateur }}
+                    </a>
+                {% endfor %}
+            </ul>
         </div>
-    </div>
+    </button>
 
     <div class="content-list">
 
