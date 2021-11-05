@@ -155,6 +155,12 @@ ul{
   @include btn-type("valider");
 }
 
+.poids-detail{
+  @include poids-detail;
+}
+picture{
+  @include picture;
+}
 .content-panier{
   @include content-type("panier");
 }

@@ -33,6 +33,7 @@ $third-color-default: black !default;
   @if($type == "text"){
     border: 2px solid black;
     padding: 10px 20px;
+    text-align: center;
   }
 
   @if($type == "column"){
@@ -42,7 +43,7 @@ $third-color-default: black !default;
     flex-direction: column;
     align-items: center;
     font-size: 20px;
-    margin-top: 5%;
+    margin: 5% 0 10% 0;
     box-sizing: border-box;
   }
 
@@ -75,8 +76,8 @@ $third-color-default: black !default;
   height: 50px;
   width: 100%;
   text-align: center;
+  position: fixed;
   bottom: 0;
-  margin: 10% 0 0 0;
 }
 
 @mixin sousTitre{
@@ -113,12 +114,13 @@ $third-color-default: black !default;
 @mixin button{
   height: 40px;
   @include text-color($first-color-default);
-  font-size: 18px;
+  font-size: 15px;
   display: block;
   background-color: #21a4ee;
   line-height: normal;
   border-radius: 5px;
   border: none;
+  padding: 10px;
 }
 
 @mixin btn-type($type){
@@ -229,6 +231,11 @@ $third-color-default: black !default;
   width: 50px;
 }
 
+@mixin poids-detail{
+  margin-left: 20px;
+  width: 50px;
+}
+
 
 @mixin backcolor-product-infos{
   @include background-color(rgba(4, 4, 4, 0.2));
@@ -312,7 +319,7 @@ $third-color-default: black !default;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 5%;
 }
 
@@ -367,10 +374,8 @@ $third-color-default: black !default;
   margin: 0 0 0 20px;
 }
 
-/*
-@mixin container-product-similar{
+@mixin picture{
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}*/
+  justify-content: center;
+}
 
