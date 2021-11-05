@@ -180,6 +180,7 @@ ul {
   align-items: center;
   font-size: 6rem;
   position: relative;
+  padding: 50px;
 }
 
 .content-details-button {
@@ -236,6 +237,22 @@ ul {
   margin: 10px 20px;
 }
 
+.content-liste-commande {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(300px, 400px));
+  grid-column-gap: 2%;
+  height: 350px;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.content-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2%;
+}
+
 @media screen and (max-width: 400px) {
   .header-container {
     display: flex;
@@ -275,7 +292,7 @@ ul {
 
   .content-liste {
     display: grid;
-    grid-template-columns: repeat(1, minmax(300px, 400px));
+    grid-template-columns: repeat(1, minmax(100px, 400px));
     grid-row-gap: 2%;
     height: 350px;
     overflow-y: scroll;
@@ -322,7 +339,7 @@ ul {
 
   .content-liste {
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 400px));
+    grid-template-columns: repeat(2, minmax(100px, 400px));
     grid-row-gap: 2%;
     height: 350px;
     overflow-y: scroll;
@@ -370,7 +387,7 @@ ul {
 
   .content-liste {
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 400px));
+    grid-template-columns: repeat(4, minmax(100px, 400px));
     grid-row-gap: 2%;
     height: 350px;
     overflow-y: scroll;

@@ -243,6 +243,21 @@ ul{
     margin: 10px 20px;
 }
 
+.content-liste-commande{
+    grid-template-columns: repeat(3, minmax(100px, 350px));
+    grid-column-gap: 2%;
+    height: fit-content;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.content-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2%;
+}
+
 @media screen and (max-width: 400px) {
     .header-container{
         display: flex;
@@ -279,7 +294,6 @@ ul{
         justify-content: center;
         margin-top: 5%;
     }/*oui*/
-
 
 
     .content-liste{
