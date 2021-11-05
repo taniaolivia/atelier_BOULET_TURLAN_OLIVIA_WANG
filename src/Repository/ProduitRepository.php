@@ -34,6 +34,7 @@ class ProduitRepository
 
         return $rows;
     }
+
     public function findPriceOfProduct(string $idProduit){
         $query = $this->em->getConnection()->createQueryBuilder();
         $rows = $query
@@ -160,6 +161,21 @@ class ProduitRepository
             ->where('p.idProduit = :idProduit')
             ->leftJoin('p', 'produit', 'o', 'p.idProduit = o.idProduit')
             ->leftJoin('o', 'utilisateur', 'u', 'o.idUtilisateur = u.idUtilisateur')
+            ->setParameter('idProduit', $idProduit)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
+
+    public function findPanierProduitName(int $idProduit)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('nomProduit')
+            ->from('produit')
+            ->where('idProduit = :idProduit')
             ->setParameter('idProduit', $idProduit)
             ->execute()
             ->fetchAllAssociative();
