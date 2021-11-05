@@ -323,9 +323,9 @@ $third-color-default: black !default;
   margin-top: 5%;
 }
 
-@mixin content-tableau{
+@mixin content-table{
   border: 1px solid black;
-  width: fit-content;
+  width: 90%;
   margin: 2%;
 }
 
@@ -377,5 +377,21 @@ $third-color-default: black !default;
 @mixin picture{
   display: flex;
   justify-content: center;
+}
+
+@mixin content-liste-commande{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(300px, 400px));
+  grid-column-gap: 2%;
+  height: 350px;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+@mixin content-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2%;
 }
 

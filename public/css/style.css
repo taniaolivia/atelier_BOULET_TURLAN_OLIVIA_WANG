@@ -261,17 +261,17 @@ picture {
   border: unset;
 }
 
-.content-tableau {
+.content-table {
   border: 1px solid black;
-  width: fit-content;
+  width: 90%;
   margin: 2%;
 }
 
-.content-tableau th {
+.content-table th {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
-.content-tableau tr:nth-child(even) {
+.content-table tr:nth-child(even) {
   background-color: #F1F1F1 !important;
 }
 
@@ -281,6 +281,22 @@ picture {
   border-radius: 15px;
   border: 1px solid #DEDEDE;
   margin: 10px 20px;
+}
+
+.content-liste-commande {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(300px, 400px));
+  grid-column-gap: 2%;
+  height: 350px;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.content-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2%;
 }
 
 @media screen and (max-width: 400px) {

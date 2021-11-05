@@ -169,20 +169,28 @@ picture{
   @include border-unset;
 }
 
-.content-tableau{
-  @include content-tableau;
+.content-table{
+  @include content-table;
 }
 
-.content-tableau th {
+.content-table th {
   @include th;
 }
 
-.content-tableau tr:nth-child(even) {
+.content-table tr:nth-child(even) {
   @include tr;
 }
 
 .recherche{
   @include recherche;
+}
+
+.content-liste-commande{
+  @include content-liste-commande;
+}
+
+.content-buttons{
+  @include content-buttons;
 }
 
 @media screen and (max-width: 400px) {
