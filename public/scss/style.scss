@@ -1,19 +1,2 @@
-@import '_reboot.scss';
-@import '_variables.scss';
 
-@import '_align.scss';
-@import '_grid.scss';
-@import '_text.scss';
-@import '_alert.scss';
-@import '_button.scss';
-@import '_nav.scss';
-
-
-@import '_build.scss';
-@import 'rules.scss';
-
-@import "_accueil.scss";
-@import "_connexion.scss";
-@import "_nosproduits.scss";
-@import "_detailproduit.scss";
-@import "_panier.scss";
+@import "general";
