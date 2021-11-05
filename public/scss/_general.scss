@@ -58,6 +58,10 @@ button:hover {
   @include btn-type("connexion");
 }
 
+.btn-add{
+  @include btn-type("add");
+}
+
 #header-recherche{
   @include header-type("recherche");
 }
@@ -79,12 +83,24 @@ ul{
   @include content-photo("petit");
 }
 
-.content-product-similaires{
-  @include content-product("similaires");
+.content-product-similar{
+  @include content-product("similar");
 }
 
 .content-product-infos{
   @include content-product("infos");
+}
+
+.product-name{
+  @include product-name;
+}
+
+.product-name-detail{
+  @include product-name-detail;
+}
+
+.quantity{
+  @include quantity;
 }
 
 .scroll{
@@ -95,12 +111,8 @@ ul{
   @include large;
 }
 
-.content-colume > h1 {
-  @include content-colume-h1;
-}
-
-.content-colume{
-  @include content-type("colume");
+.content-column{
+  @include content-type("column");
 }
 
 .content-product {
@@ -119,6 +131,18 @@ ul{
   @include poids;
 }
 
+.product-similar {
+  @include product-similar;
+}
+
+.product-img{
+  @include product-img
+}
+
+/*.container-product-similar{
+  @include container-product-similar
+}*/
+
 .backcolor-product-infos {
   @include backcolor-product-infos;
 }
@@ -131,6 +155,12 @@ ul{
   @include btn-type("valider");
 }
 
+.poids-detail{
+  @include poids-detail;
+}
+picture{
+  @include picture;
+}
 .content-panier{
   @include content-type("panier");
 }
@@ -139,15 +169,15 @@ ul{
   @include border-unset;
 }
 
-.content-tableau{
-  @include content-tableau;
+.content-table{
+  @include content-table;
 }
 
-.content-tableau th {
+.content-table th {
   @include th;
 }
 
-.content-tableau tr:nth-child(even) {
+.content-table tr:nth-child(even) {
   @include tr;
 }
 
@@ -155,13 +185,54 @@ ul{
   @include recherche;
 }
 
+.content-liste-commande{
+  @include content-liste-commande;
+}
+
+.content-buttons{
+  @include content-buttons;
+}
+
+.btn-drop{
+  @include btn-type("drop");
+}
+
+.btn-drop:hover .drop-down-content {
+  @include drop-down-taille;
+}
+
+.drop-down{
+  @include drop-down;
+}
+
+.drop-down-content{
+  @include drop-down-content;
+}
+
+.drop-down-content a {
+  @include drop-down-content-a;
+}
+
+#li-panier{
+  @include li-panier;
+}
+
 @media screen and (max-width: 400px) {
+  .content-column > h1 {
+    @include content-column-h1(20px);
+  }
+
+  .content-text{
+    font-size: 15px;
+  }
+
   .header-container{
     @include header-container(column, fit-content);
   }
 
   li{
-    @include li-structure(20px, 30px, 20px, 30px, 100%);
+    @include li-structure(5px, 30px, 5px, 30px, 100%);
+    font-size: 12px;
   }
 
   #couverture{
@@ -176,8 +247,8 @@ ul{
     @include connexion;
   }
 
-  .content-liste{
-    @include content-liste(1);
+  .content-list{
+    @include content-list(1);
   }
 
   .content-details{
@@ -187,6 +258,11 @@ ul{
 }
 
 @media screen and (min-width: 400px) {
+
+  .content-column > h1 {
+    @include content-column-h1(25px);
+  }
+
   .header-container{
     @include header-container(column, inherit);
   }
@@ -199,8 +275,8 @@ ul{
     @include connexion;
   }
 
-  .content-liste{
-    @include content-liste(2);
+  .content-list{
+    @include content-list(2);
   }
 
   .content-details{
@@ -210,8 +286,13 @@ ul{
 }
 
 @media screen and (min-width: 1000px) {
+
+  .content-column > h1 {
+    @include content-column-h1(30px);
+  }
+
   li{
-    @include li-structure(20px, 30px, 20px, 30px, fit-content);
+    @include li-structure(20px, 15px, 20px, 15px, 100%);
   }
 
   .header-container{
@@ -222,8 +303,8 @@ ul{
     @include content;
   }
 
-  .content-liste{
-    @include content-liste(4);
+  .content-list{
+    @include content-list(4);
   }
 
   .content-details{

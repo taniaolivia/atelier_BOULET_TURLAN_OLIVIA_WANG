@@ -21,8 +21,9 @@ class ListCommandesAction extends ActionController{
     protected function action():Response
     {
         $commandes = $this->commandeRepository->findAllCommandesWithClientName();
-        return $this->container->get('view')->render($this->response, 'commande/listCommandes.html.twig',[
-            "commandes"=>$commandes
+        return $this->container->get('view')->render($this->response, 'utilisateurs/gerant/listCommandes.html.twig',[
+            "commandes"=>$commandes,
+            "session"=>$_SESSION
         ]);                
     }
 

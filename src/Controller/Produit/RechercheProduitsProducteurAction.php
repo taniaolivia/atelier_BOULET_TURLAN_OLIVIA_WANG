@@ -8,7 +8,7 @@ use App\Repository\UtilisateurRepository;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class ListeProduitsAction extends ActionController{
+class RechercheProduitsProducteurAction extends ActionController{
 
     public $container;
     public $produitRepository;
@@ -25,15 +25,14 @@ class ListeProduitsAction extends ActionController{
 
     protected function action():Response
     {
-        $produits = $this->produitRepository->findAllProduits();
         $categorie = $this->categorieRepository->findAllCategorie();
         $producteur = $this->utilisateurRepository->findAllProducteursByRole(1);
+        $recherche = $this->produitRepository->findProduitByProducteur($this->args['producteur']);
 
-        return $this->container->get('view')->render($this->response, 'produit/listeProduits.html.twig', [
-            'produits' => $produits,
-            'categorie' => $categorie,
+        return $this->container->get('view')->render($this->response, 'produit/listeProduitsRechercheProducteur.html.twig', [
+            'recherches' => $recherche,
             'producteur' => $producteur,
-            "session"=>$_SESSION
+            'categorie' => $categorie
         ]);
     }
 

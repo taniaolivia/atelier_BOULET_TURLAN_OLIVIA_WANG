@@ -30,14 +30,14 @@ class SuppressionPanierAction extends ActionController{
             $nouveauPanier = [];
             foreach ($panier as $ligne) {
                 if($ligne['idProduit'] != $produitId && $ligne['quantiteProduit'] != $quantite){
-                    array_push($nouveauPanier,$ligne);
+                    array_push($nouveauPanier, $ligne);
                 }
             }
         }
         $_SESSION['panier'] = $nouveauPanier;
 
         return $this->response
-            ->withHeader('location','/panier') // Ici il faudra rediriger vers le profil du producteur
+            ->withHeader('location','/panier')
             ->withStatus(302);
     }
     
