@@ -23,9 +23,10 @@ class ViewDetailCommandAction extends ActionController{
         $commandeId = (int) $this->args['id'];
         $commande = $this->commandeRepository->findOneById($commandeId);
         $produits = $this->commandeRepository->findProduitsDeLaCommande($commandeId);
-        return $this->container->get('view')->render($this->response, 'commande/detailCommande.html.twig',[
+        return $this->container->get('view')->render($this->response, 'utilisateurs/gerant/detailCommande.html.twig',[
             "commande"=>$commande,
-            "produits"=>$produits
+            "produits"=>$produits,
+            "session"=>$_SESSION
         ]);                
     }
 

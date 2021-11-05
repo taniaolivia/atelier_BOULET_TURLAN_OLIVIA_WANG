@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block header %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    
+        <div>
+            Nombre de producteurs :{{ nbProducteurs }}
+            Nombre de clients : {{ nbClientGlobal }}
+            Nombre de commandes : {{ nbCommandesGlobal }}
+            Chiffre d'affaire Global : {{ caGlobal }}
+        </div>
+        
+        {% for producteur in caProducteurs %}
+        <a href="{{ '/gerant/commande/' ~ commande.idCommande }}">
+        <div class="row">
+            <div class="col-l-2">
+                {{producteur.nomProducteur}}
+            </div>
+            <div class="col-l-4">
+                {{producteur.caProducteur}}
+            </div>
+        </div>
+        </a>
+        {% endfor %}
+    
+{% endblock %}
+
+

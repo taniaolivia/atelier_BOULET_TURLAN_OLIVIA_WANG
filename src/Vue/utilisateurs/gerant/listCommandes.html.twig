@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block header %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    
+        {% for commande in commandes %}
+        <a href="{{ '/gerant/commande/' ~ commande.idCommande }}">
+        <div class="row">
+            <div class="col-l-2">
+                {{commande.idCommande}}
+            </div>
+            <div class="col-l-4">
+                {{commande.montant}}
+            </div>
+            <div class="col-l-4">
+                {{commande.nomUtilisateur}}
+            </div>
+        </div>
+        </a>
+        {% endfor %}
+    
+{% endblock %}
+
+

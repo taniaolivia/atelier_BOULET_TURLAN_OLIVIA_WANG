@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Detail de la commande{% endblock %}
+
+{% block main %}
+        {% for command in commande %}
+        <div class="row">
+            <div class="col-l-2">
+                {{command.idCommande}}
+            </div>
+            <div class="col-l-4">
+                {{command.montant}}
+            </div>
+            <div class="col-l-4">
+                {{command.nomUtilisateur}}
+            </div>
+        </div>
+        {% endfor %}
+        {% for produit in produits %}
+        <div class="row">
+            <div class="col-l-2">
+                {{produit.idProduit}}
+            </div>
+            <div class="col-l-2">
+                {{produit.quantite}}
+            </div>
+            <div class="col-l-2">
+                {{produit.nomProduit}}
+            </div>
+        </div>
+        {% endfor %}
+    
+{% endblock %}
+
+

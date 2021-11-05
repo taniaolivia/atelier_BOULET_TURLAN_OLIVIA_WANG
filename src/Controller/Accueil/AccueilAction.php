@@ -17,7 +17,8 @@ class AccueilAction extends ActionController{
 
     protected function action():Response
     {
-        return $this->container->get('view')->render($this->response, 'accueil/accueil.html.twig');
+        return $this->container->get('view')->render($this->response, 'accueil/accueil.html.twig',[
+            "session"=>$_SESSION]
+        );
     }
-
 }

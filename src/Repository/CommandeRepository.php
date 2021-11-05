@@ -60,5 +60,17 @@ class CommandeRepository
         return $produits;
     }
 
+    public function findNumberOfCommande(){
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $produits = $query
+            ->select('count(idCommande)')
+            ->from('commande')
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $produits;
+    }
+
     
 }
