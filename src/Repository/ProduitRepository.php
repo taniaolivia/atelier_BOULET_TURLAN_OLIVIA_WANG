@@ -80,4 +80,33 @@ class ProduitRepository
 
         return $rows;
     }
+
+    public function findCategorieByName()
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('p.idCategorie, c.nomCategorie')
+            ->from('produit', 'p')
+            ->leftJoin('p', 'categorie', 'c', 'p.idCategorie = c.idCategorie')
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
+
+    public function findSelectedCategorie(int $idCategorie)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('idProduit, nomProduit')
+            ->from('produit')
+            ->where('idCategorie = :idCategorie')
+            ->setParameter('idCategorie', $idCategorie)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
 }

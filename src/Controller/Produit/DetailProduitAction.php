@@ -16,7 +16,6 @@ class DetailProduitAction extends ActionController{
     {
         $this->container = $container;
         $this->repository = $repository;
-
     }
 
     protected function action():Response
