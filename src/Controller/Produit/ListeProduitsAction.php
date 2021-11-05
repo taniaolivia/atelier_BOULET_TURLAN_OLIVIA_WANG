@@ -32,7 +32,8 @@ class ListeProduitsAction extends ActionController{
         return $this->container->get('view')->render($this->response, 'produit/listeProduits.html.twig', [
             'produits' => $produits,
             'categorie' => $categorie,
-            'producteur' => $producteur
+            'producteur' => $producteur,
+            "session"=>$_SESSION
         ]);
     }
 

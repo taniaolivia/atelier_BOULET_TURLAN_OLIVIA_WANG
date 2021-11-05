@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Authentification{% endblock %}
+
+{% block stylesheets %}  
+{% endblock %}
+
+{% block main %}
+<div>
+    <div class="container">
+	{% if session.theme %}
+		<div class="alert-danger">{{ session.message }}</div>
+	{% endif %}	
+
+		<form action="/connexion" method ="POST">
+
+				<input name="mail" type="text" placeholder="Adresse mail">
+
+				<input name="password" type="password" placeholder="Mot de passe">
+
+				<input type="submit" value="Connexion">
+
+		</form>
+    </div>
+</div><!-- Jumbotron -->
+{% endblock %}
+
+{% block javascripts %}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/javascript/userPosition/position.js"></script>
+{% endblock %}
+

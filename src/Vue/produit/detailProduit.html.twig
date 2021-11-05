@@ -12,17 +12,17 @@
 
 {% block main %}
     <div class="content-column">
+        {% for produit in produit %}
         <div class="content-details">
             <img class="content-product-photo content-photo-grand" src={{ base_path() }}"/images/logo.png">
-            <form class="content-product-infos">
-                {% for produit in produit %}
+            <form class="content-product-infos" method="POST" action='/panier/ajout/{{ produit.idProduit }}'>
                     <p class="product-name-detail">{{ produit.nomProduit }} {{ produit.tarifUnitaire }}€</p><hr>
                     <p>Description : {{ produit.description }}</p>
                 {% endfor %}
                 {% for producteur in producteur %}
                     <p>Producteur : <a href = {{ url_for('detailproducteur', {'producteur' : producteur.idUtilisateur }) }}>{{ producteur.nomUtilisateur }}</a></p>
                 {% endfor %}
-                <p>Quantité (par kg) :<input type="text" id="poids" name="poids" required></p>
+                <p>Quantité (par kg) :<input type="text" class="poids-detail" name="quantite" placeholder="0" required></p>
                 <button class="btn btn-ajouter" type="submit">Ajouter au panier</button>
             </form>
         </div>
@@ -32,9 +32,9 @@
             <br>
             <div class="container-product-similar">
                 {% for similaire in similaire %}
-                    <p><a href={{ url_for('detailproduit', {'produit' : similaire.idProduit }) }}>
-                            <img class="content-product-photo content-photo-petit product-img" src={{ base_path() }}"/images/logo_2.png">
-                        </a></p>
+                    <a href={{ url_for('detailproduit', {'produit' : similaire.idProduit }) }}>
+                        <img class="content-product-photo content-photo-petit product-img" src={{ base_path() }}"/images/logo_2.png">
+                    </a>
                 {% endfor %}
             </div>
         </div>

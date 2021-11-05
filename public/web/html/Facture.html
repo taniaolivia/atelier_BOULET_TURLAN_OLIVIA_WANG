@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css"><!--css-->
-    <!--<link rel="stylesheet" href="../../css/style.css">--> <!--scss-->
+    <!--<link rel="stylesheet" href="../css/style.css">--> <!--css-->
+    <link rel="stylesheet" href="../../css/style.css"> <!--scss-->
     <link href="https://pictogrammers.github.io/@mdi/font/2.0.46/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Facture</title>
 </head>
 <body>
@@ -15,8 +17,11 @@
         <li><a href="">Nos produits</a></li>
         <li><a href="">Nos producteurs</a></li>
         <li><a href="">Connexion</a></li>
-        <input type="text" id="header-recherche" placeholder="Tier la collection" />
-        <a class="header-panier"><span class="mdi mdi-cart"></span></a>
+        <span class="mdi mdi-magnify">
+            <input type="text" id="header-recherche" placeholder="Tier la collection" />
+            <a class="header-panier"><span class="mdi mdi-cart"></span></a>
+        </span>
+
     </ul>
 </header>
 <div class="content-colume scroll">
@@ -33,7 +38,7 @@
             <h3>Votre commande</h3>
             <div class="content-panier">
                 <img class="content-product-photo content-photo-petit" src="../../images/logo_2.png">
-                <form class="">
+                <form>
                     <span>Pomme</span>
                     <p>Quantité : 4</p>
                 </form>
@@ -42,7 +47,7 @@
 
             <div class="content-panier">
                 <img class="content-product-photo content-photo-petit" src="../../images/logo_2.png">
-                <form class="">
+                <form>
                     <span>Poire</span>
                     <p>Quantité : 3</p>
                 </form>

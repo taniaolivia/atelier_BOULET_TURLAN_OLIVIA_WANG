@@ -34,6 +34,18 @@ class ProduitRepository
 
         return $rows;
     }
+    public function findPriceOfProduct(string $idProduit){
+        $query = $this->em->getConnection()->createQueryBuilder();
+        $rows = $query
+            ->select('tarifUnitaire')
+            ->from('produit')
+            ->where('idProduit = :idProduit')
+            ->setParameter('idProduit', $idProduit)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
 
     public function findProducteurByProduit(int $idProduit)
     {
@@ -45,6 +57,20 @@ class ProduitRepository
             ->where('p.idProduit = :idProduit')
             ->leftJoin('p', 'utilisateur', 'u', 'p.idUtilisateur = u.idUtilisateur')
             ->setParameter('idProduit', $idProduit)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
+
+    public function findProduitsByProducteur(int $idProducteur){
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('idProduit,tarifUnitaire')
+            ->from('produit', 'p')
+            ->where('p.idUtilisateur = :idUtilisateur')
+            ->setParameter('idUtilisateur', $idProducteur)
             ->execute()
             ->fetchAllAssociative();
 
@@ -119,6 +145,22 @@ class ProduitRepository
             ->from('produit')
             ->where('idUtilisateur = :idUtilisateur')
             ->setParameter('idUtilisateur', $idUtilisateur)
+            ->execute()
+            ->fetchAllAssociative();
+          
+         return $rows;
+    }
+  
+    public function findAskQuantityOfProduct(int $idProduit){
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('p.idProduit, p.quantite, o.idUtilisateur, u.nomUtilisateur')
+            ->from('panier','p')
+            ->where('p.idProduit = :idProduit')
+            ->leftJoin('p', 'produit', 'o', 'p.idProduit = o.idProduit')
+            ->leftJoin('o', 'utilisateur', 'u', 'o.idUtilisateur = u.idUtilisateur')
+            ->setParameter('idProduit', $idProduit)
             ->execute()
             ->fetchAllAssociative();
 

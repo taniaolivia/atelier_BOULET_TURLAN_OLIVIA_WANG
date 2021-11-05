@@ -3,9 +3,7 @@
 {% block title %}Detail de la commande{% endblock %}
 
 {% block main %}
-        <div style="height:20px;width:20px; color:red;"></div>
         {% for command in commande %}
-        <div style="height:20px;width:20px; color:red;"></div>
         <div class="row">
             <div class="col-l-2">
                 {{command.idCommande}}
@@ -19,10 +17,14 @@
         </div>
         {% endfor %}
         {% for produit in produits %}
-        <div style="height:20px;width:20px; color:red;"></div>
         <div class="row">
             <div class="col-l-2">
                 {{produit.idProduit}}
+            </div>
+            <div class="col-l-2">
+                {{produit.quantite}}
+            </div>
+            <div class="col-l-2">
                 {{produit.nomProduit}}
             </div>
         </div>
