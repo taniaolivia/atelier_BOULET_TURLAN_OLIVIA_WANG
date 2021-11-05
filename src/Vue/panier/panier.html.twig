@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des produits{% endblock %}
+
+{% block header %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block main %}
+<div class="content-column">
+    <h1>Voici votre panier</h1>
+    {% for ligne in session.panier %}
+    	{{ ligne.idProduit }}
+        {{ ligne.quantiteProduit }}
+        <form method="POST" action="{{ '/panier/suppression/' ~ ligne.idProduit }}">
+            <input type="hidden" name="quantite" value="{{ligne.quantiteProduit}}">
+            <button type="submit"class="btn-add">Supprimer</button>
+        </form>
+
+    {% endfor %}
+   
+</div>
+
+
+{% endblock %}
+
+

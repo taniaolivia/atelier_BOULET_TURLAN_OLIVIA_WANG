@@ -23,13 +23,13 @@
                     <img src={{ base_path() }}"/images/logo_2.png">
                 </div>
                 <div class="content-product-details">
-                    <form method="#" action="#">
+                    <form method="POST" action="{{ '/panier/ajout/' ~ produits.idProduit }}">
                         <br>
                         <p class="product-name">{{ produits.nomProduit }}</p>
                         <br>
-                        <p>Quantité (par kg)<input type="text" class="poids" name="poids"></p>
+                        <p>Quantité (par kg)<input type="text" class="poids" name="quantite" placeholder="0"></p>
                         <div class="content-details-button">
-                            <button class="btn-add">Ajouter au panier</button>
+                            <button type="submit"class="btn-add">Ajouter au panier</button>
                             <button class="btn-detail">
                                 <a href={{ url_for('detailproduit', {'produit' : produits.idProduit }) }}>
                                     Voir le détail
