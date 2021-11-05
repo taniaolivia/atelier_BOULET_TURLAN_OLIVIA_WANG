@@ -37,7 +37,7 @@ class SuppressionPanierAction extends ActionController{
         $_SESSION['panier'] = $nouveauPanier;
 
         return $this->response
-            ->withHeader('location','/panier') // Ici il faudra rediriger vers le profil du producteur
+            ->withHeader('location','/panier')
             ->withStatus(302);
     }
     

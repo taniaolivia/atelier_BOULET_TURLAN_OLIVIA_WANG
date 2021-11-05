@@ -11,6 +11,7 @@ use App\Controller\Utilisateurs\Producteur\ListeProducteursAction;
 use App\Controller\Utilisateurs\Producteur\DetailProducteurAction;
 use App\Controller\Utilisateurs\Gerant\ListCommandesAction;
 use App\Controller\Utilisateurs\Gerant\ViewDetailCommandAction;
+use App\Controller\Utilisateurs\Gerant\ViewDashboardAction;
 
 use App\Controller\Panier\AjoutPanierAction;
 use App\Controller\Panier\SuppressionPanierAction;
@@ -42,6 +43,7 @@ $app->group('/gerant', function (RouteCollectorProxy $group) {
 
     $group->get('/list-commandes', ListCommandesAction::class);
     $group->get('/commande/{id}', ViewDetailCommandAction::class);
+    $group->get('/tableau-de-bord', ViewDashboardAction::class);
 });
 $app->group('/panier', function (RouteCollectorProxy $group) {
     $group->get('', function($request, $response, $args){

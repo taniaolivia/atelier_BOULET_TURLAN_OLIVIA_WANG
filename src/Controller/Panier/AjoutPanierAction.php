@@ -22,7 +22,6 @@ class AjoutPanierAction extends ActionController{
     protected function action():Response
     {
         $produitId = (int) $this->args['id'];
-        //$group = $this->groupRepository->find($groupId);
         $parsedBody = $this->request->getParsedBody();
         $quantite = htmlspecialchars($parsedBody['quantite']);
         if (isset($_SESSION['panier'])){
@@ -34,7 +33,7 @@ class AjoutPanierAction extends ActionController{
         $_SESSION['panier'] = ($panier);
 
         return $this->response
-            ->withHeader('location','/nosproduits') // Ici il faudra rediriger vers le profil du producteur
+            ->withHeader('location','/nosproduits')
             ->withStatus(302);
     }
 }
