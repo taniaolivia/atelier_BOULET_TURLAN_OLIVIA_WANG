@@ -22,7 +22,9 @@
                 {% for producteur in producteur %}
                     <p>Producteur : <a href = {{ url_for('detailproducteur', {'producteur' : producteur.idUtilisateur }) }}>{{ producteur.nomUtilisateur }}</a></p>
                 {% endfor %}
+
                 <p>Quantité (par kg) :<input type="text" class="poids-detail" name="quantite" placeholder="0" required></p>
+
                 <button class="btn btn-ajouter" type="submit">Ajouter au panier</button>
             </form>
         </div>

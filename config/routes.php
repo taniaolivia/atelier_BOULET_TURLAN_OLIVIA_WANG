@@ -1,5 +1,6 @@
 <?php
 
+use App\Controller\Panier\CommanderAction;
 use App\Controller\Produit\RechercheProduitsProducteurAction;
 use Slim\Routing\RouteCollectorProxy;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -27,10 +28,10 @@ $app->get('/nosproduits/recherches/{producteur}', RechercheProduitsProducteurAct
 $app->get('/nosproducteurs', ListeProducteursAction::class)->setName('nosproducteurs');
 $app->get('/nosproducteurs/{producteur}', DetailProducteurAction::class)->setName('detailproducteur');
 
-$app->group('/connexion', function (RouteCollectorProxy $group){
-    $group->get('', function($request, $response, $args){
-        return $this->get('view')->render($response, 'connexion/connexion.html.twig',[
-            "session"=> $_SESSION
+$app->group('/connexion', function (RouteCollectorProxy $group) {
+    $group->get('', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'connexion/connexion.html.twig', [
+            "session" => $_SESSION
         ]);
     });
     $group->post('', ConnexionAction::class);
@@ -51,14 +52,16 @@ $app->group('/gerant', function (RouteCollectorProxy $group) {
     $group->get('/tableau-de-bord', ViewDashboardAction::class);
 });
 $app->group('/panier', function (RouteCollectorProxy $group) {
-    $group->get('', function($request, $response, $args){
-
-        return $this->get('view')->render($response, 'panier/panier.html.twig',[
-            "session"=> $_SESSION
+    $group->get('', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'panier/panier.html.twig', [
+            "session" => $_SESSION
         ]);
     });
     $group->post('/ajout/{id}', AjoutPanierAction::class);
     $group->post('/suppression/{id}', SuppressionPanierAction::class);
     //$group->get('/retrait/{id}', ViewDetailCommandAction::class);
 });
+$app->post('/commande', CommanderAction::class)->setName('commande');
+//$app->get('/comdander', ListeProduitsAction::class);
+//$app->get('/nosproduits', ListeProduitsAction::class)
 

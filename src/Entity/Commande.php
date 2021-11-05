@@ -55,12 +55,7 @@ class Commande
     private $idutilisateur;
 
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
+
 
     public function getIdcommande()
     {
@@ -113,6 +108,23 @@ class Commande
         $this->idutilisateur = $idutilisateur;
 
         return $this;
+    }
+
+    public function __construct(
+        ?int $idcommande,
+        string $montant,
+        string $statutpayer,
+        string $statutlivraison,
+
+        Utilisateur $idutilisateur
+
+    ) {
+        $this->idcommande = $idcommande;
+        $this->montant = $montant;
+        $this->statutpayer = $statutpayer;
+        $this->statutlivraison = $statutlivraison;
+        $this->idutilisateur = $idutilisateur;
+
     }
 
 }

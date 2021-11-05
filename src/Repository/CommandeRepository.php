@@ -21,23 +21,24 @@ class CommandeRepository
         $commandes = $query
             ->select('c.*, u.nomUtilisateur')
             ->from('commande', 'c')
-            ->leftJoin('c','utilisateur','u', 'c.idUtilisateur = u.idUtilisateur')
+            ->leftJoin('c', 'utilisateur', 'u', 'c.idUtilisateur = u.idUtilisateur')
             ->execute()
             ->fetchAllAssociative();
 
         return $commandes;
     }
 
-    public function findOneById(int $id){
-        
+    public function findOneById(int $id)
+    {
+
         $query = $this->em->getConnection()->createQueryBuilder();
 
         $commande = $query
             ->select('c.*, u.nomUtilisateur')
-            ->from('commande','c')
+            ->from('commande', 'c')
             ->where('idCommande=:idCommande')
-            ->setParameter('idCommande',$id)
-            ->leftJoin('c','utilisateur','u', 'c.idUtilisateur = u.idUtilisateur')
+            ->setParameter('idCommande', $id)
+            ->leftJoin('c', 'utilisateur', 'u', 'c.idUtilisateur = u.idUtilisateur')
             ->execute()
             ->fetchAllAssociative();
 
@@ -52,12 +53,29 @@ class CommandeRepository
             ->select('p.idProduit, p.nomProduit, panier.quantite')
             ->from('panier', 'panier')
             ->where('idCommande=:idCommande')
-            ->setParameter('idCommande',$idCommande)
-            ->leftJoin('panier','produit','p', 'panier.idProduit = p.idProduit')
+            ->setParameter('idCommande', $idCommande)
+            ->leftJoin('panier', 'produit', 'p', 'panier.idProduit = p.idProduit')
             ->execute()
             ->fetchAllAssociative();
 
         return $produits;
+    }
+
+    public function findCommandeOfUser($idUtilisateur)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('idCommande')
+            ->from('commande')
+            ->where('idUtilisateur = :idUtilisateur')
+            ->setParameter('idUtilisateur', $idUtilisateur)
+            ->execute()
+            ->fetchOne();
+
+        return $rows;
+
+
     }
 
     public function findNumberOfCommande(){
@@ -72,5 +90,4 @@ class CommandeRepository
         return $produits;
     }
 
-    
 }
