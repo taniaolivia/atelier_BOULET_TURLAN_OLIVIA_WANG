@@ -15,7 +15,8 @@
   <li>Arrêtez XAMPP/WAMP/LAMP/MAMP, si vous avez déjà lancé</li>
   <li>Vous pouvez cloner ssh dans n'importe quel répertoire de votre choix, mais pas dans le répertoire XAMPP/LAMP/WAMP/MAMP</li>
   <li>Lancez le service docker</li>
-  <li>Sous répertoire de atelier_BOULET_TURLAN_OLIVIA_WANG, tapez la commande <code>docker-compose up --build</code> sur terminal</li>
+  <li>Sous répertoire de atelier_BOULET_TURLAN_OLIVIA_WANG, pour le moment, il faut entrer la commande <code>composer install</code>
+    Puis tapez la commande <code>docker-compose up --build</code> sur terminal</li>
   
   <li>
     Vous pouvez vous connecter sur phpmyadmin <code>http://localhost:8081</code> avec les identifiants suivants :<br>
