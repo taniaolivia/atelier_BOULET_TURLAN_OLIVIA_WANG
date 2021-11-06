@@ -300,6 +300,7 @@ $third-color-default: black !default;
   overflow-y: scroll;
   align-items: center;
   margin: 30px 0 0 30px;
+  grid-column-gap: 20px;
 }
 
 @mixin content-details($height, $type){
@@ -441,6 +442,11 @@ $third-color-default: black !default;
 @mixin li-panier{
   border: none;
   padding-top: 10px;
+}
+
+@mixin producteur{
+  width:100%;
+  border-radius: 5%;
 }
 
 
