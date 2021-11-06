@@ -23,8 +23,8 @@
                 <th>Livrée</th>
             </tr>
             <tbody>
-            <tr>
                 {% for commande in commandes %}
+                <tr>
                         <td><a href="{{ '/gerant/commande/' ~ commande.idCommande }}">Commande {{ commande.idCommande }}</a></td>
                         <td>{{ commande.nomUtilisateur }}</td>
                         <td>{{ commande.montant }}€</td>
@@ -38,9 +38,10 @@
                         {% elseif commande.statutLivraison == '0' %}
                             <td>Non</td>
                         {% endif %}
+                </tr>
                 {% endfor %}
 
-            </tr>
+
             </tbody>
         </table>
     </div>
