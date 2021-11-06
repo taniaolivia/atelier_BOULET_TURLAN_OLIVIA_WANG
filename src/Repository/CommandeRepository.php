@@ -90,4 +90,19 @@ class CommandeRepository
         return $produits;
     }
 
+    public function findFactureByIdCom($idCommande)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('numFacture')
+            ->from('facture')
+            ->where('idCommande = :idCommande')
+            ->setParameter('idCommande', $idCommande)
+            ->execute()
+            ->fetchOne();
+
+        return $rows;
+    }
+
 }

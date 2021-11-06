@@ -58,4 +58,19 @@ class UtilisateurRepository
         return $rows;
     }
 
+    public function findClientById(int $roleId)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('idUtilisateur, nomUtilisateur, numTel, mail, adresse')
+            ->from('utilisateur')
+            ->where('roleId = :roleId')
+            ->setParameter('roleId', $roleId)
+            ->execute()
+            ->fetchAllAssociative();
+
+        return $rows;
+    }
+
 }
