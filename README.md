@@ -33,6 +33,9 @@
 <p> Producteur : taniaolivia9@gmail.com  -  btow</p>
 <p> Gérant : clement.boulet60510@gmail.com  -  btow</p>
 
+<h1>Documents</h1>
+<p>Vous pouvez consulter tous notre documents (modèle des données, maquettes et rapport final) sous le répertoire <code>/documents</code>.</p>
+
 <h1>Lien utiles</h1>
 <address>
     <a href="https://github.com/taniaolivia/atelier_BOULET_TURLAN_OLIVIA_WANG">Lien Github</a>
