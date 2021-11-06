@@ -44,12 +44,11 @@ class CommanderAction extends ActionController
     {
 
         $user = new Utilisateur(null, "ab", "ab", "ab", "ab", 0, "0670474714");
-//       $this->em->persist($user);
-//     $this->em->flush();
-        $var = $this->utilisateurRepository->findUtilisateurByMail("a");
-        // var_dump($var[0]["idUtilisateur"]);
+//      $this->em->persist($user);
+//      $this->em->flush();
+        $var = $this->utilisateurRepository->findUtilisateurByMail("a");;
         $idUtilisateur = (int)$var[0]['idUtilisateur'];
-        var_dump($idUtilisateur);
+    
         $user->setIdutilisateur($idUtilisateur);
 
 //         var_dump($user);
