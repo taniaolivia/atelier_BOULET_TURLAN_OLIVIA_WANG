@@ -1,33 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Tableau de bord{% endblock %}
 
 {% block header %}
     {% include 'navbar.html.twig' %}
 {% endblock %}
 
 {% block main %}
-    
-        <div>
-            Nombre de producteurs :{{ nbProducteurs }}
-            Nombre de clients : {{ nbClientGlobal }}
-            Nombre de commandes : {{ nbCommandesGlobal }}
-            Chiffre d'affaire Global : {{ caGlobal }}
-        </div>
-        
-        {% for producteur in caProducteurs %}
-        <a href="{{ '/gerant/commande/' ~ commande.idCommande }}">
-        <div class="row">
-            <div class="col-l-2">
-                {{producteur.nomProducteur}}
-            </div>
-            <div class="col-l-4">
-                {{producteur.caProducteur}}
-            </div>
-        </div>
-        </a>
-        {% endfor %}
-    
+<div class="content-column">
+    <h1>Tableau de bord</h1>
+    <div class="header-container">
+        <span class="mdi mdi-magnify">
+		    <input type="text" class="recherche" id="product-recherche" placeholder="Rechercher un produit">
+		</span>
+    </div>
+    <table class="content-table">
+        <tr>
+            <th>Nombre de producteurs</th>
+            <th>Nombre de clients</th>
+            <th>Nombre de commandes</th>
+            <th>Chiffre d'affaire Global</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>{{ nbProducteurs }}</td>
+                <td>{{ nbClientGlobal }}</td>
+                <td>{{ nbCommandesGlobal }}</td>
+                <td>{{ caGlobal }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="content-table">
+        <tr>
+            <th>Nom de producteur</th>
+            <th>Chiffre d'affaire</th>
+        </tr>
+        <tbody>
+            {% for producteur in caProducteurs %}
+                <tr>
+                    <td><a href="{{ '/gerant/commande/' ~ commande.idCommande }}">{{producteur.nomProducteur}}}</td>
+                    <td>{{producteur.caProducteur}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}
 
 
