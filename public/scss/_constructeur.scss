@@ -158,11 +158,11 @@ $third-color-default: black !default;
     border: 1px solid #DEDEDE;
     margin: 10px 20px;
   }
+}
 
-  @if($type == "panier"){
+@mixin header-panier($top, $right, $bottom, $left){
     font-size: 2rem;
-    padding: 20px;
-  }
+    padding: $top $right $bottom $left;
 }
 
 @mixin ul{
@@ -172,7 +172,7 @@ $third-color-default: black !default;
 @mixin content-photo($type){
   @if($type == "grand"){
     border: 2px solid black;
-    width: 500px;
+    width: 90%;
     height: fit-content;
   }
   @if($type == "petit"){
@@ -187,9 +187,7 @@ $third-color-default: black !default;
     border: 2px solid black;
     width: 100%;
     height: fit-content;
-  }
-  @if($type == "infos"){
-    width: 100%;
+    margin-top: 10%;
   }
 
   @if($type == "photo"){
@@ -204,6 +202,10 @@ $third-color-default: black !default;
   }
 }
 
+@mixin content-product-infos($top) {
+    margin-top: $top;
+    width: 90%;
+}
 @mixin scroll{
   height: 550px;
   overflow-y: scroll;
@@ -308,8 +310,8 @@ $third-color-default: black !default;
   grid-column-gap: 20px;
 }
 
-@mixin content-details($height, $type){
-  width: 100%;
+@mixin content-details($width, $height, $type){
+  width: $width;
   height: $height;
   display: grid;
   box-sizing: border-box;

@@ -115,19 +115,13 @@ button:hover {
   margin: 10px 20px;
 }
 
-.header-panier {
-  font-size: 2rem;
-  padding: 20px;
-  padding: 0;
-}
-
 ul {
   padding-left: unset;
 }
 
 .content-photo-grand {
   border: 2px solid black;
-  width: 500px;
+  width: 90%;
   height: fit-content;
 }
 
@@ -141,10 +135,7 @@ ul {
   border: 2px solid black;
   width: 100%;
   height: fit-content;
-}
-
-.content-product-infos {
-  width: 100%;
+  margin-top: 10%;
 }
 
 .product-name {
@@ -361,6 +352,11 @@ picture {
 }
 
 @media screen and (max-width: 400px) {
+  .header-panier {
+    font-size: 2rem;
+    padding: 5px 40px 5px 40px;
+  }
+
   .content-column > h1 {
     width: 100%;
     height: fit-content;
@@ -432,8 +428,18 @@ picture {
     grid-template-rows: 1fr 1fr;
     justify-content: center;
   }
+
+  .content-product-infos {
+    margin-top: -190px;
+    width: 90%;
+  }
 }
 @media screen and (min-width: 400px) {
+  .header-panier {
+    font-size: 2rem;
+    padding: 10px 47% 10px 47%;
+  }
+
   .content-column > h1 {
     width: 100%;
     height: fit-content;
@@ -491,8 +497,30 @@ picture {
     grid-template-rows: 1fr 1fr;
     justify-content: center;
   }
+
+  .content-product-infos {
+    margin-top: -25px;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 440px) {
+  .content-product-infos {
+    margin-top: -150px;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 441px) and (max-width: 490px) {
+  .content-product-infos {
+    margin-top: -30%;
+    width: 90%;
+  }
 }
 @media screen and (min-width: 1000px) {
+  .header-panier {
+    font-size: 2rem;
+    padding: 10px 60px 20px 60px;
+  }
+
   .content-column > h1 {
     width: 100%;
     height: fit-content;
@@ -549,6 +577,11 @@ picture {
     box-sizing: border-box;
     padding: 0 50px;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .content-product-infos {
+    margin-top: -20px;
+    width: 90%;
   }
 }
 
