@@ -41,6 +41,7 @@ services:
       - 3306:3306
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./atelier2.sql:/docker-entrypoint-initdb.d/atelier2.sql
     environment:
       MYSQL_DATABASE: atelier
       MYSQL_USER: btow
