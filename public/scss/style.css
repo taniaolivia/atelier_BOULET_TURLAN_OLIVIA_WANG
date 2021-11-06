@@ -81,7 +81,7 @@ button {
   color: white !important;
   font-size: 15px;
   display: block;
-  background-color: #21a4ee !important;
+  background-color: #21a4ee;
   line-height: normal;
   border-radius: 5px;
   border: none;
@@ -109,7 +109,7 @@ button:hover {
 
 #header-recherche {
   font-size: 1rem;
-  background-color: #F1F1F1 !important;
+  background-color: #F1F1F1;
   border-radius: 15px;
   border: 1px solid #DEDEDE;
   margin: 10px 20px;
@@ -150,17 +150,15 @@ ul {
 .product-name {
   font-weight: bold;
   text-align: center;
-  background-color: steelblue !important;
+  background-color: steelblue;
   padding: 10px;
   margin: -30px 0 0 0;
-  height: 45px;
-  overflow-y: scroll;
 }
 
 .product-name-detail {
   font-weight: bold;
   text-align: center;
-  background-color: steelblue !important;
+  background-color: steelblue;
   padding: 10px;
 }
 
@@ -181,7 +179,7 @@ ul {
 
 .content-column {
   opacity: 10;
-  color: black !important;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,14 +189,13 @@ ul {
 }
 
 .content-product {
-  width: 100%;
-  grid-column-gap: 5%;
+  width: 90%;
   border: 1px solid #DEDEDE;
   border-radius: 10px 10px 0 0;
 }
 
 .content-product > .content-product-photo {
-  background-color: #F1F1F1 !important;
+  background-color: #F1F1F1;
   height: 150px;
   display: flex;
   justify-content: center;
@@ -214,7 +211,7 @@ ul {
 }
 
 .poids {
-  margin-left: 5%;
+  margin-left: 70px;
   width: 50px;
 }
 
@@ -280,7 +277,7 @@ picture {
 
 .recherche {
   font-size: 1rem;
-  background-color: #F1F1F1 !important;
+  background-color: #F1F1F1;
   border-radius: 15px;
   border: 1px solid #DEDEDE;
   margin: 10px 20px;
@@ -326,7 +323,7 @@ picture {
   width: 0;
   padding-left: 0;
   display: flow;
-  color: black !important;
+  color: black;
   overflow: hidden;
   position: absolute;
   transition: all 1s ease;
@@ -337,7 +334,7 @@ picture {
 
 .drop-down-content a {
   float: none;
-  color: black !important;
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -398,7 +395,7 @@ picture {
 
   .connexion {
     opacity: 10;
-    color: black !important;
+    color: black;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -413,7 +410,7 @@ picture {
     height: 400px;
     overflow-y: scroll;
     align-items: center;
-    margin: 30px 30px 30px 30px;
+    margin: 30px 0 0 30px;
     grid-column-gap: 20px;
   }
 
@@ -457,7 +454,7 @@ picture {
 
   .connexion {
     opacity: 10;
-    color: black !important;
+    color: black;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -472,7 +469,7 @@ picture {
     height: 400px;
     overflow-y: scroll;
     align-items: center;
-    margin: 30px 30px 30px 30px;
+    margin: 30px 0 0 30px;
     grid-column-gap: 20px;
   }
 
@@ -532,7 +529,7 @@ picture {
     height: 400px;
     overflow-y: scroll;
     align-items: center;
-    margin: 30px 30px 30px 30px;
+    margin: 30px 0 0 30px;
     grid-column-gap: 20px;
   }
 

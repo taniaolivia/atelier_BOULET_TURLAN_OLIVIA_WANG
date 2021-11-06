@@ -217,6 +217,10 @@ picture{
   @include li-panier;
 }
 
+.producteur{
+  @include producteur;
+}
+
 @media screen and (max-width: 400px) {
   .content-column > h1 {
     @include content-column-h1(20px);

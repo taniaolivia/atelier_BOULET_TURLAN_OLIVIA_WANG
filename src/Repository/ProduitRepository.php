@@ -68,7 +68,7 @@ class ProduitRepository
         $query = $this->em->getConnection()->createQueryBuilder();
 
         $rows = $query
-            ->select('idProduit,tarifUnitaire')
+            ->select('idProduit,tarifUnitaire, nomProduit')
             ->from('produit', 'p')
             ->where('p.idUtilisateur = :idUtilisateur')
             ->setParameter('idUtilisateur', $idProducteur)

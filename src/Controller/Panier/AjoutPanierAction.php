@@ -25,7 +25,6 @@ class   AjoutPanierAction extends ActionController{
         $parsedBody = $this->request->getParsedBody();
         $prix = $this->produitRepository->findPriceOfProduct($this->args['id']);
         $nomProduit = $this->produitRepository->findPanierProduitName($this->args['id']);
-        var_dump($nomProduit);
         $quantite = htmlspecialchars($parsedBody['quantite']);
         if (isset($_SESSION['panier'])){
             $panier = ($_SESSION['panier']);

@@ -23,9 +23,6 @@
                             <input type="hidden" name="quantite" value="{{ ligne.quantiteProduit }}">
                             <button type="submit" class="btn btn-supprimer">Supprimer</button>
                         </form>
-                        <form method="POST" action="{{ '/commande'}}">
-                            <button type="submit"class="btn-add">commander</button>
-                        </form>
                         {% set total =  ligne.prix * ligne.quantiteProduit %}
                         {% set somme =  somme + total %}
                         <div class="content-product-tarf">{{ total }}€</div>

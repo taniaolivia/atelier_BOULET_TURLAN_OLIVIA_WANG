@@ -38,7 +38,7 @@ $third-color-default: black !default;
 
   @if($type == "column"){
     opacity:10;
-    color: black;
+    @include text-color($third-color-default);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +48,8 @@ $third-color-default: black !default;
   }
 
   @if($type == "product"){
-    width: 90%;
+    width: 100%;
+    grid-column-gap: 5%;
     border: 1px solid #DEDEDE;
     border-radius: 10px 10px 0 0;
   }
@@ -116,7 +117,7 @@ $third-color-default: black !default;
   @include text-color($first-color-default);
   font-size: 15px;
   display: block;
-  background-color: #21a4ee;
+  @include background-color(#21a4ee);
   line-height: normal;
   border-radius: 5px;
   border: none;
@@ -152,7 +153,7 @@ $third-color-default: black !default;
 @mixin header-type($type){
   @if($type == "recherche"){
     font-size: 1rem;
-    background-color: #F1F1F1;
+    @include background-color(#F1F1F1);
     border-radius: 15px;
     border: 1px solid #DEDEDE;
     margin: 10px 20px;
@@ -192,7 +193,7 @@ $third-color-default: black !default;
   }
 
   @if($type == "photo"){
-    background-color: #F1F1F1;
+    @include background-color(#F1F1F1);
     height: 150px;
     display: flex;
     justify-content: center;
@@ -232,7 +233,7 @@ $third-color-default: black !default;
 
 
 @mixin poids{
-  margin-left: 70px;
+  margin-left: 5%;
   width: 50px;
 }
 
@@ -284,7 +285,7 @@ $third-color-default: black !default;
 
 @mixin connexion{
   opacity:10;
-  color: black;
+  @include text-color($third-color-default);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -299,7 +300,8 @@ $third-color-default: black !default;
   height: 400px;
   overflow-y: scroll;
   align-items: center;
-  margin: 30px 0 0 30px;
+  margin: 30px 30px 30px 30px;
+  grid-column-gap: 20px;
 }
 
 @mixin content-details($height, $type){
@@ -344,7 +346,7 @@ $third-color-default: black !default;
 
 @mixin recherche {
   font-size: 1rem;
-  background-color: #F1F1F1;
+  @include background-color(#F1F1F1);
   border-radius: 15px;
   border: 1px solid #DEDEDE;
   margin: 10px 20px;
@@ -353,16 +355,18 @@ $third-color-default: black !default;
 @mixin product-name-detail {
   font-weight: bold;
   text-align: center;
-  background-color: steelblue;
+  @include background-color(steelblue);
   padding: 10px;
 }
 
 @mixin product-name {
   font-weight: bold;
   text-align: center;
-  background-color: steelblue;
+  @include background-color(steelblue);
   padding: 10px;
   margin: -30px 0 0 0;
+  height: 45px;
+  overflow-y: scroll;
 }
 
 @mixin quantity {
@@ -420,7 +424,7 @@ $third-color-default: black !default;
   width: 0;
   padding-left: 0;
   display: flow;
-  color: black;
+  @include text-color($third-color-default);
   overflow: hidden;
   position: absolute;
   transition: all 1s ease;
@@ -431,7 +435,7 @@ $third-color-default: black !default;
 
 @mixin drop-down-content-a{
   float: none;
-  color: black;
+  @include text-color($third-color-default);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -441,6 +445,11 @@ $third-color-default: black !default;
 @mixin li-panier{
   border: none;
   padding-top: 10px;
+}
+
+@mixin producteur{
+  width:100%;
+  border-radius: 5%;
 }
 
 

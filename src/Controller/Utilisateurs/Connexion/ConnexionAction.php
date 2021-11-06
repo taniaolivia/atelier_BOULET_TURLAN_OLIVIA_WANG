@@ -34,8 +34,9 @@ class ConnexionAction extends ActionController{
 
                 if($user['roleId'] == '1'){
                     $_SESSION['role'] = '1';
+                    $path = '/producteur' . '/' . $user['idUtilisateur'];
                     return $this->response
-                    ->withHeader('location','/') // Ici il faudra rediriger vers le profil du producteur
+                    ->withHeader('location',$path) // Ici il faudra rediriger vers le profil du producteur
                     ->withStatus(302);
                 }
                 else if($user['roleId'] == '2'){

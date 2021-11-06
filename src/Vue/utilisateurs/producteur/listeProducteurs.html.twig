@@ -13,7 +13,7 @@
     <div class="content-list">
         {% for producteurs in producteurs %}
             <a href={{ url_for('detailproducteur', {'producteur' : producteurs.idUtilisateur }) }}>
-                <div class="content-product">
+                <div class="content-product producteur">
                     <div class="content-product-photo">
                         <img src={{ base_path() }}"/images/logo_2.png">
                     </div>
