@@ -33,7 +33,7 @@
         <tbody>
             {% for producteur in caProducteurs %}
                 <tr>
-                    <td><a href="{{ '/gerant/commande/' ~ commande.idCommande }}">{{producteur.nomProducteur}}}</td>
+                    <td>{{producteur.nomProducteur}}</td>
                     <td>{{producteur.caProducteur}}</td>
                 </tr>
             {% endfor %}
