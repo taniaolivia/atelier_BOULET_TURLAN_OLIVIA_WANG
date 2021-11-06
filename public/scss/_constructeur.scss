@@ -283,6 +283,10 @@ $third-color-default: black !default;
   padding-left: unset;
 }
 
+@mixin padding-commande{
+  padding: 0 50px;
+}
+
 @mixin connexion{
   opacity:10;
   @include text-color($third-color-default);

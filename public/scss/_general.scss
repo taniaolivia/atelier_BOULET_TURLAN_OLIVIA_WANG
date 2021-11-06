@@ -191,6 +191,8 @@ picture{
 
 .content-buttons{
   @include content-buttons;
+  margin-bottom: 100px;
+  top: -50px;
 }
 
 .btn-drop{
@@ -219,6 +221,10 @@ picture{
 
 .producteur{
   @include producteur;
+}
+
+.padding-commande{
+  @include padding-commande;
 }
 
 @media screen and (max-width: 400px) {
