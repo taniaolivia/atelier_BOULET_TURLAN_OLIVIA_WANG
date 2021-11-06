@@ -34,7 +34,7 @@ class CommandeRepository
         $query = $this->em->getConnection()->createQueryBuilder();
 
         $commande = $query
-            ->select('c.*, u.nomUtilisateur')
+            ->select('c.*, u.nomUtilisateur, u.adresse')
             ->from('commande', 'c')
             ->where('idCommande=:idCommande')
             ->setParameter('idCommande', $id)
