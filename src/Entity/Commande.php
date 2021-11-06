@@ -115,7 +115,6 @@ class Commande
         string $montant,
         string $statutpayer,
         string $statutlivraison,
-
         Utilisateur $idutilisateur
 
     ) {
