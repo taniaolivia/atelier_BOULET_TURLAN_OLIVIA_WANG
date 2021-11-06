@@ -18,19 +18,19 @@
   <li>Sous répertoire de atelier_BOULET_TURLAN_OLIVIA_WANG, tapez la commande <code>docker-compose up --build</code> sur terminal</li>
   
   <li>
-    Connectez sur phpmyadmin <code>http://localhost:8081</code> avec des variables correspondant aux paramètres suivants :<br>
+    Vous pouvez vous connecter sur phpmyadmin <code>http://localhost:8081</code> avec les identifiants suivants :<br>
     <ul>Utilisateur: btow</ul>
     <ul>Mot de passe: btow</ul>
   </li>
   
-  <li>Sous répertoire de atelier_BOULET_TURLAN_OLIVIA_WANG, tapez le commande <code>docker-compose exec php bash</code> et
-  <code>vendor/bin/doctrine orm:schema-tool:create</code> pour générer des tableau de base.</li>
-
-  <li>Mettre en place le script de la base de donnée <code>(scriptBash.sql)</code>
-          sur phpmyadmin <code>http://localhost:8081</code></li>
   <li>Lancez l'application sur navigateur <code>http://localhost:8080</code></li>
   <li>Vous pouvez maitenant profiter de l'application</li>
 </ol>
+
+
+<h1>Identifiants</h1>
+<p> Producteur : taniaolivia9@gmail.com  -  btow</p>
+<p> Gérant : clement.boulet60510@gmail.com  -  btow</p>
 
 <h1>Lien utiles</h1>
 <address>
