@@ -15,6 +15,7 @@ use App\Controller\Produit\DetailProduitAction;
 use App\Controller\Utilisateurs\Connexion\ConnexionAction;
 use App\Controller\Utilisateurs\Producteur\ListeProducteursAction;
 use App\Controller\Utilisateurs\Producteur\DetailProducteurAction;
+use App\Controller\Utilisateurs\Producteur\ListCommandProducteurAction;
 use App\Controller\Produit\RechercheProduitsAction;
 use App\Controller\Utilisateurs\Gerant\ListCommandesAction;
 use App\Controller\Utilisateurs\Gerant\ViewDetailCommandAction;
@@ -47,6 +48,8 @@ $app->get('/deconnexion', function (Request $request, Response $response) {
         ->withStatus(302);
   }
 );
+
+$app->get('/producteur/{id}', ListCommandProducteurAction::class);
 
 $app->group('/gerant', function (RouteCollectorProxy $group) {
 
