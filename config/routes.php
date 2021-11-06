@@ -2,6 +2,7 @@
 
 use App\Controller\Panier\CommanderAction;
 use App\Controller\Produit\RechercheProduitsProducteurAction;
+use App\Controller\Panier\PanierFactureAction;
 use Slim\Routing\RouteCollectorProxy;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -59,6 +60,7 @@ $app->group('/panier', function (RouteCollectorProxy $group) {
     });
     $group->post('/ajout/{id}', AjoutPanierAction::class);
     $group->post('/suppression/{id}', SuppressionPanierAction::class);
+    $group->get('/facture', PanierFactureAction::class);
     //$group->get('/retrait/{id}', ViewDetailCommandAction::class);
 });
 $app->post('/commande', CommanderAction::class)->setName('commande');
