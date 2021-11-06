@@ -189,7 +189,7 @@ $third-color-default: black !default;
     height: fit-content;
   }
   @if($type == "infos"){
-    width: 400px;
+    width: 100%;
   }
 
   @if($type == "photo"){
