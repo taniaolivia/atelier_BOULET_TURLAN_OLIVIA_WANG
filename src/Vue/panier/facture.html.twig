@@ -32,10 +32,10 @@
 
                 {% set frais =  5 %}
                 {% for sommaire in sommaire %}
-                <p>Sous-total {{ sommaire.montant - frais }}€</p>
+                <p>Sous-total {{ sommaire.montant }}€</p>
                 <p>Frais de livraison {{ frais }}€</p>
                 <hr>
-                <strong>Total à payer {{ sommaire.montant + frais}}€</strong>
+                <strong>Total à payer {{ sommaire.montant + frais }}€</strong>
                 {% endfor %}
 
                 <p>(Paiement est directement au magasin)</p>
