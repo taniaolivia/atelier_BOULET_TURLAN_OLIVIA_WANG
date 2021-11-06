@@ -288,7 +288,7 @@ picture {
 
 .content-liste-commande {
   display: grid;
-  grid-template-columns: repeat(1, minmax(300px, 400px));
+  grid-template-columns: repeat(4, minmax(300px, 400px));
   grid-column-gap: 2%;
   height: 350px;
   overflow-y: scroll;
