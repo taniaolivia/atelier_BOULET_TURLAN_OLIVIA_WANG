@@ -62,7 +62,7 @@ class PanierInfoLivraisonAction extends ActionController
         $this->em->flush();
         $_SESSION['panier']=[];
         return $this->response
-            ->withHeader('location', '/panier/info/facture') 
+            ->withHeader('location', '/') 
             ->withStatus(302);
     }
 }

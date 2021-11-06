@@ -34,6 +34,7 @@
                 <h3>Sommaire</h3>
                 {% set frais =  5 %}
                 {% if sommaire %}
+                    {% set sommaire = sommaire - 5 %}
                     <p>Sous-total {{ sommaire }}€</p>
                     <p>Frais de livraison {{ frais }}€</p>
                     <hr>
