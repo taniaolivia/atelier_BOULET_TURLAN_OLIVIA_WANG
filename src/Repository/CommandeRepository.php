@@ -105,4 +105,59 @@ class CommandeRepository
         return $rows;
     }
 
+    public function addCommande(string $montant)
+    {
+        $values = [
+            'montant' => $montant
+        ];
+
+        return $this->em->getConnection()->insert('commande', $values);
+    }
+
+    public function addUser($idCommande, $idUtilisateur)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->update('commande')
+            ->set('idUtilisateur', ':idUtilisateur')
+            ->where('idCommande = :idCommande')
+            ->setParameter('idUtilisateur',$idUtilisateur)
+            ->setParameter('idCommande', $idCommande)
+            ->execute();
+
+        return $rows;
+    }
+
+
+    public function findMontantByMontant($montant)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('montant')
+            ->from('commande')
+            ->where('montant = :montant')
+            ->setParameter('montant', $montant)
+            ->execute()
+            ->fetchOne();
+
+        return $rows;
+    }
+
+    public function findCommandeByMontant($montant)
+    {
+        $query = $this->em->getConnection()->createQueryBuilder();
+
+        $rows = $query
+            ->select('idCommande')
+            ->from('commande')
+            ->where('montant = :montant')
+            ->setParameter('montant', $montant)
+            ->execute()
+            ->fetchOne();
+
+        return $rows;
+    }
+
 }

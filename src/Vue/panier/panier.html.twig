@@ -37,13 +37,14 @@
                 </p>
                 <hr>
             </div>
-            <form class="content-product-infos padding-product-infos backcolor-product-infos">
+            <form class="content-product-infos padding-product-infos backcolor-product-infos" method="post" action="/panier/valider">
                 <h3>Sommaire</h3>
                 <p>Sous-total {{ somme }}€</p>
                 {% set frais =  5 %}
                 <p>Frais de livraison {{ frais }}€</p>
                 <br>
-                <strong>Total à payer {{ somme + 5}}€</strong>
+                <strong>Total à payer {{ somme + frais }}€</strong>
+                <input type="hidden" value={{ somme + frais }} name="montant">
                 <hr>
                 <button class="btn btn-valider" type="submit">Valider mon panier</button>
             </form>

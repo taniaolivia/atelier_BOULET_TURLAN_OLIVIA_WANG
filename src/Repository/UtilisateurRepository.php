@@ -44,6 +44,7 @@ class UtilisateurRepository
 
         return $rows;
     }
+
     public function findUtilisateurByMail(string $mail){
         $query = $this->em->getConnection()->createQueryBuilder();
 
@@ -71,6 +72,19 @@ class UtilisateurRepository
             ->fetchAllAssociative();
 
         return $rows;
+    }
+
+    public function addClientInfo(string $nom, string $numTel, string $mail, string $adresse)
+    {
+        $values = [
+            'nomUtilisateur' => $nom,
+            'numTel' => $numTel,
+            'mail' => $mail,
+            'adresse'=> $adresse,
+            'roleId' => '0'
+        ];
+
+        return $this->em->getConnection()->insert('utilisateur', $values);
     }
 
 }

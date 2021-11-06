@@ -1,6 +1,8 @@
 <?php
 
 use App\Controller\Panier\CommanderAction;
+use App\Controller\Panier\PanierInfoLivraisonAction;
+use App\Controller\Panier\PanierValiderAction;
 use App\Controller\Produit\RechercheProduitsProducteurAction;
 use App\Controller\Panier\PanierFactureAction;
 use Slim\Routing\RouteCollectorProxy;
@@ -58,9 +60,15 @@ $app->group('/panier', function (RouteCollectorProxy $group) {
             "session" => $_SESSION
         ]);
     });
+    $group->get('/info', PanierInfoLivraisonAction::class);
+    $group->post('/info', PanierInfoLivraisonAction::class);
+
+    $group->get('/valider', PanierValiderAction::class);
+    $group->post('/valider', PanierValiderAction::class);
+
     $group->post('/ajout/{id}', AjoutPanierAction::class);
     $group->post('/suppression/{id}', SuppressionPanierAction::class);
-    $group->get('/facture', PanierFactureAction::class);
+    $group->get('/info/facture', PanierFactureAction::class);
     //$group->get('/retrait/{id}', ViewDetailCommandAction::class);
 });
 $app->post('/commande', CommanderAction::class)->setName('commande');
