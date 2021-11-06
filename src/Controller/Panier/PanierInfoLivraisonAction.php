@@ -32,17 +32,7 @@ class PanierInfoLivraisonAction extends ActionController
     }
 
     protected function action(): Response
-    {
-
-        $this->commande($_POST);
-        return $this->response
-            ->withHeader('location', '/panier') // Ici il faudra rediriger vers le profil du producteur
-            ->withStatus(302);
-    }
-
-    protected function commande($post)
-    {
-        $nom = htmlentities($_POST['nom']);
+    {   $nom = htmlentities($_POST['nom']);
         $mail = htmlentities($_POST['mail']);
         $numTel = htmlentities($_POST['numTel']);
         $adresse = htmlentities($_POST['adresse']);
@@ -72,8 +62,44 @@ class PanierInfoLivraisonAction extends ActionController
         $this->em->flush();
         $_SESSION['panier']=[];
         return $this->response
-            ->withHeader('location', '/') 
+            ->withHeader('location', '/panier/info/facture') 
             ->withStatus(302);
     }
+
+    /*protected function commande($post)
+    {
+        $nom = htmlentities($_POST['nom']);
+        $mail = htmlentities($_POST['mail']);
+        $numTel = htmlentities($_POST['numTel']);
+        $adresse = htmlentities($_POST['adresse']);
+        $montant = htmlentities($_POST['montant']);
+
+        $user = new Utilisateur(null, $nom, $adresse,$mail,"", 0, $numTel);
+        $this->em->persist($user);
+        $this->em->flush();
+        $requeteUsers = $this->utilisateurRepository->findUtilisateurByMail($mail);;
+        $idUtilisateur = (int)$requeteUsers[0]['idUtilisateur'];
+        $user->setIdutilisateur($idUtilisateur);
+
+        $montant = htmlentities($_POST['montant']);
+        $commande = new Commande(null, $montant, 0, 0, $user);
+        $this->em->persist($commande);
+        $this->em->flush();
+        $panier = $_SESSION['panier'];
+        //*find id commande
+        $idCommande = $this->commanderepository->findCommandeOfUser($idUtilisateur);
+
+        foreach ($panier as $ligne) {
+            $idproduit = $ligne['idProduit'];
+            $quantite = $ligne['quantiteProduit'];
+            $panier = new Panier(null, $idproduit, $idCommande, $quantite);
+            $this->em->persist($panier);
+        }
+        $this->em->flush();
+        $_SESSION['panier']=[];
+        return $this->response
+            ->withHeader('location', '/panier/info/facture') 
+            ->withStatus(302);
+    }*/
 
 }
